@@ -15,7 +15,7 @@ class ArticleItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder10,
+        borderRadius: BorderRadiusStyle.roundedBorder11,
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -53,7 +53,7 @@ class ArticleItemWidget extends StatelessWidget {
                     "msg_the_25_healthiest".tr,
                     maxLines: null,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtInterSemiBold12.copyWith(
+                    style: AppStyle.txtInterSemiBold12Gray700.copyWith(
                       height: getVerticalSize(
                         1.10,
                       ),
@@ -78,7 +78,7 @@ class ArticleItemWidget extends StatelessWidget {
                           "lbl_jun_10_2021".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterMedium9Gray500.copyWith(
+                          style: AppStyle.txtInterMedium9.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

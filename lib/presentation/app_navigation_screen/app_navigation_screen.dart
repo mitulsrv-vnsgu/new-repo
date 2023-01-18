@@ -63,102 +63,6 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapSignup();
-                                            },
-                                            child: Container(
-                                                width: size.width,
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_signup2"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20
-                                                                      .copyWith(
-                                                                          height:
-                                                                              getVerticalSize(1.00))))),
-                                                      Container(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  1.00),
-                                                          width: size.width,
-                                                          margin:
-                                                              getMargin(top: 5),
-                                                          decoration: BoxDecoration(
-                                                              color: ColorConstant
-                                                                  .bluegray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapDashboardContainer();
-                                            },
-                                            child: Container(
-                                                width: size.width,
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "msg_dashboard_container"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20
-                                                                      .copyWith(
-                                                                          height:
-                                                                              getVerticalSize(1.00))))),
-                                                      Container(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  1.00),
-                                                          width: size.width,
-                                                          margin:
-                                                              getMargin(top: 5),
-                                                          decoration: BoxDecoration(
-                                                              color: ColorConstant
-                                                                  .bluegray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
                                               onTapDrList();
                                             },
                                             child: Container(
@@ -589,14 +493,6 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                     ])))
                                       ]))))
                     ]))));
-  }
-
-  onTapSignup() {
-    Get.toNamed(AppRoutes.signupScreen);
-  }
-
-  onTapDashboardContainer() {
-    Get.toNamed(AppRoutes.dashboardContainerScreen);
   }
 
   onTapDrList() {

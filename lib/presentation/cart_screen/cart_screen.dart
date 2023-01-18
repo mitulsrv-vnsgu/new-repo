@@ -263,7 +263,7 @@ class CartScreen extends GetWidget<CartController> {
                     top: 13,
                   ),
                   decoration: AppDecoration.outlineBluegray50.copyWith(
-                    borderRadius: BorderRadiusStyle.roundedBorder10,
+                    borderRadius: BorderRadiusStyle.roundedBorder11,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -297,7 +297,7 @@ class CartScreen extends GetWidget<CartController> {
                           "lbl_change".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular12Gray500.copyWith(
+                          style: AppStyle.txtInterRegular12.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

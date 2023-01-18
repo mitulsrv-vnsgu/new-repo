@@ -90,9 +90,9 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius roundedBorder10 = BorderRadius.circular(
+  static BorderRadius roundedBorder11 = BorderRadius.circular(
     getHorizontalSize(
-      10.00,
+      11.00,
     ),
   );
 
@@ -153,6 +153,12 @@ class BorderRadiusStyle {
       getHorizontalSize(
         8.00,
       ),
+    ),
+  );
+
+  static BorderRadius circleBorder8 = BorderRadius.circular(
+    getHorizontalSize(
+      8.00,
     ),
   );
 

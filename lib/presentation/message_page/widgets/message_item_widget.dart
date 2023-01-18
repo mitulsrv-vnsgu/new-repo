@@ -107,7 +107,7 @@ class MessageItemWidget extends StatelessWidget {
                           "msg_i_don_t_have_any".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular12Gray500.copyWith(
+                          style: AppStyle.txtInterRegular12.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

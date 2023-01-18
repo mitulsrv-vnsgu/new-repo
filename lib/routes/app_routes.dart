@@ -1,7 +1,3 @@
-import 'package:mitul_s_application38/presentation/signup_screen/signup_screen.dart';
-import 'package:mitul_s_application38/presentation/signup_screen/binding/signup_binding.dart';
-import 'package:mitul_s_application38/presentation/dashboard_container_screen/dashboard_container_screen.dart';
-import 'package:mitul_s_application38/presentation/dashboard_container_screen/binding/dashboard_container_binding.dart';
 import 'package:mitul_s_application38/presentation/dr_list_screen/dr_list_screen.dart';
 import 'package:mitul_s_application38/presentation/dr_list_screen/binding/dr_list_binding.dart';
 import 'package:mitul_s_application38/presentation/dr_details_screen/dr_details_screen.dart';
@@ -25,12 +21,6 @@ import 'package:mitul_s_application38/presentation/app_navigation_screen/binding
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static const String signupScreen = '/signup_screen';
-
-  static const String dashboardContainerScreen = '/dashboard_container_screen';
-
-  static const String dashboardPage = '/dashboard_page';
-
   static const String drListScreen = '/dr_list_screen';
 
   static const String drDetailsScreen = '/dr_details_screen';
@@ -60,20 +50,6 @@ class AppRoutes {
   static String initialRoute = '/initialRoute';
 
   static List<GetPage> pages = [
-    GetPage(
-      name: signupScreen,
-      page: () => SignupScreen(),
-      bindings: [
-        SignupBinding(),
-      ],
-    ),
-    GetPage(
-      name: dashboardContainerScreen,
-      page: () => DashboardContainerScreen(),
-      bindings: [
-        DashboardContainerBinding(),
-      ],
-    ),
     GetPage(
       name: drListScreen,
       page: () => DrListScreen(),
@@ -146,9 +122,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => SignupScreen(),
+      page: () => DrListScreen(),
       bindings: [
-        SignupBinding(),
+        DrListBinding(),
       ],
     )
   ];

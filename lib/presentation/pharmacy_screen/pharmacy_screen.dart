@@ -65,7 +65,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                           width: double.infinity,
                           margin: getMargin(left: 20, top: 25, right: 19),
                           decoration: AppDecoration.fillBluegray50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder10),
+                              borderRadius: BorderRadiusStyle.roundedBorder11),
                           child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -110,7 +110,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                     child: Text("lbl_see_all".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular12
+                                        style: AppStyle.txtInterRegular12Cyan300
                                             .copyWith(
                                                 height: getVerticalSize(1.00))))
                               ])),
@@ -154,7 +154,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                     child: Text("lbl_see_all".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular12
+                                        style: AppStyle.txtInterRegular12Cyan300
                                             .copyWith(
                                                 height: getVerticalSize(1.00))))
                               ])),

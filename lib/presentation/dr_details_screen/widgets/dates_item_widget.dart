@@ -19,7 +19,7 @@ class DatesItemWidget extends StatelessWidget {
           right: 12,
         ),
         decoration: AppDecoration.outlineBluegray50.copyWith(
-          borderRadius: BorderRadiusStyle.roundedBorder10,
+          borderRadius: BorderRadiusStyle.roundedBorder11,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -118,7 +118,7 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                           top: 103,
                         ),
                         decoration: AppDecoration.fillWhiteA700.copyWith(
-                          borderRadius: BorderRadiusStyle.roundedBorder10,
+                          borderRadius: BorderRadiusStyle.roundedBorder11,
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,

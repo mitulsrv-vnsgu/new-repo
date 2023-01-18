@@ -98,7 +98,7 @@ class SettignsPage extends StatelessWidget {
                                     color: ColorConstant.whiteA700,
                                     shape: RoundedRectangleBorder(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder10,
+                                          BorderRadiusStyle.circleBorder8,
                                     ),
                                     child: Container(
                                       height: getSize(
@@ -110,7 +110,7 @@ class SettignsPage extends StatelessWidget {
                                       decoration:
                                           AppDecoration.fillWhiteA700.copyWith(
                                         borderRadius:
-                                            BorderRadiusStyle.roundedBorder10,
+                                            BorderRadiusStyle.circleBorder8,
                                       ),
                                       child: Stack(
                                         children: [

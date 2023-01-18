@@ -224,7 +224,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular12.copyWith(
+                        style: AppStyle.txtInterRegular12Cyan300.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -247,7 +247,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                   children: [
                     Container(
                       decoration: AppDecoration.outlineBluegray10001.copyWith(
-                        borderRadius: BorderRadiusStyle.roundedBorder10,
+                        borderRadius: BorderRadiusStyle.roundedBorder11,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -265,7 +265,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusStyle.roundedBorder10,
+                                borderRadius: BorderRadiusStyle.circleBorder8,
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -275,8 +275,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                   138.00,
                                 ),
                                 decoration: AppDecoration.fillGray400.copyWith(
-                                  borderRadius:
-                                      BorderRadiusStyle.roundedBorder10,
+                                  borderRadius: BorderRadiusStyle.circleBorder8,
                                 ),
                                 child: Stack(
                                   children: [
@@ -331,7 +330,8 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               "msg_comparing_the_astrazeneca".tr,
                               maxLines: null,
                               textAlign: TextAlign.left,
-                              style: AppStyle.txtInterSemiBold12.copyWith(
+                              style:
+                                  AppStyle.txtInterSemiBold12Gray700.copyWith(
                                 height: getVerticalSize(
                                   1.10,
                                 ),
@@ -358,8 +358,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     "lbl_jun_12_2021".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle.txtInterMedium9Gray500
-                                        .copyWith(
+                                    style: AppStyle.txtInterMedium9.copyWith(
                                       height: getVerticalSize(
                                         1.00,
                                       ),
@@ -415,7 +414,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         left: 17,
                       ),
                       decoration: AppDecoration.outlineBluegray10001.copyWith(
-                        borderRadius: BorderRadiusStyle.roundedBorder10,
+                        borderRadius: BorderRadiusStyle.roundedBorder11,
                       ),
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -433,7 +432,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusStyle.roundedBorder10,
+                                borderRadius: BorderRadiusStyle.circleBorder8,
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -443,8 +442,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                   138.00,
                                 ),
                                 decoration: AppDecoration.fillGray400.copyWith(
-                                  borderRadius:
-                                      BorderRadiusStyle.roundedBorder10,
+                                  borderRadius: BorderRadiusStyle.circleBorder8,
                                 ),
                                 child: Stack(
                                   children: [
@@ -499,7 +497,8 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               "msg_the_horror_of_the".tr,
                               maxLines: null,
                               textAlign: TextAlign.left,
-                              style: AppStyle.txtInterSemiBold12.copyWith(
+                              style:
+                                  AppStyle.txtInterSemiBold12Gray700.copyWith(
                                 height: getVerticalSize(
                                   1.10,
                                 ),
@@ -526,8 +525,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     "lbl_jun_10_20212".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
-                                    style: AppStyle.txtInterMedium9Gray500
-                                        .copyWith(
+                                    style: AppStyle.txtInterMedium9.copyWith(
                                       height: getVerticalSize(
                                         1.00,
                                       ),
@@ -611,7 +609,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular12.copyWith(
+                        style: AppStyle.txtInterRegular12Cyan300.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),

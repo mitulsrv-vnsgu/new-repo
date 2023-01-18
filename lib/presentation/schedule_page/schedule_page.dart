@@ -88,7 +88,7 @@ class SchedulePage extends StatelessWidget {
             children: [
               Container(
                 decoration: AppDecoration.fillBluegray50.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder10,
+                  borderRadius: BorderRadiusStyle.circleBorder8,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

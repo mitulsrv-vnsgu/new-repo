@@ -16,7 +16,7 @@ class ScheduleItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder10,
+        borderRadius: BorderRadiusStyle.circleBorder8,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

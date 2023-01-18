@@ -43,7 +43,7 @@ class DrDetailsScreen extends GetWidget<DrDetailsController> {
                       Container(
                           margin: getMargin(left: 1, right: 10),
                           decoration: AppDecoration.outlineBluegray50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder10),
+                              borderRadius: BorderRadiusStyle.roundedBorder11),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               crossAxisAlignment: CrossAxisAlignment.center,

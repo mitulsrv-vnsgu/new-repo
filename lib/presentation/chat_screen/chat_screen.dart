@@ -102,7 +102,7 @@ class ChatScreen extends GetWidget<ChatController> {
               Container(
                 width: double.infinity,
                 decoration: AppDecoration.outlineBluegray50.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder10,
+                  borderRadius: BorderRadiusStyle.roundedBorder11,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,

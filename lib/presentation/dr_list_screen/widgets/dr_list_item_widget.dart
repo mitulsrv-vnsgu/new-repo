@@ -21,7 +21,7 @@ class DrListItemWidget extends StatelessWidget {
       },
       child: Container(
         decoration: AppDecoration.outlineBluegray50.copyWith(
-          borderRadius: BorderRadiusStyle.roundedBorder10,
+          borderRadius: BorderRadiusStyle.roundedBorder11,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,

@@ -51,7 +51,7 @@ class MessagePage extends StatelessWidget {
                       Container(
                           margin: getMargin(right: 1),
                           decoration: AppDecoration.fillBluegray50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder10),
+                              borderRadius: BorderRadiusStyle.circleBorder8),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,

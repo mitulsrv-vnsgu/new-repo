@@ -96,7 +96,6 @@ final Map<String, String> enUs = {
   "lbl_messages": "Messages",
   "msg_upload_prescription": "Upload Prescription",
   "lbl_5min_read": "5min read",
-  "lbl_signup2": "Signup",
   "lbl_help": "Help",
   "lbl_covid_19": "Covid-19",
   "lbl_confirmed": "Confirmed",
@@ -205,7 +204,6 @@ final Map<String, String> enUs = {
   "lbl_all": "All",
   "lbl_sign_in2": "Sign In",
   "lbl_ambulance": "Ambulance",
-  "msg_dashboard_container": "Dashboard - Container",
   "lbl_10_00_am": "10:00 AM",
   "msg_i_have_suffering":
       "I have suffering from headache \nand cold for 3 days, I took 2 \ntablets of dolo, but still pain",
