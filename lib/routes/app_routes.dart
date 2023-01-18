@@ -1,7 +1,3 @@
-import 'package:mitul_s_application38/presentation/splash_screen/splash_screen.dart';
-import 'package:mitul_s_application38/presentation/splash_screen/binding/splash_binding.dart';
-import 'package:mitul_s_application38/presentation/login_screen/login_screen.dart';
-import 'package:mitul_s_application38/presentation/login_screen/binding/login_binding.dart';
 import 'package:mitul_s_application38/presentation/signup_screen/signup_screen.dart';
 import 'package:mitul_s_application38/presentation/signup_screen/binding/signup_binding.dart';
 import 'package:mitul_s_application38/presentation/dashboard_container_screen/dashboard_container_screen.dart';
@@ -29,10 +25,6 @@ import 'package:mitul_s_application38/presentation/app_navigation_screen/binding
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static const String splashScreen = '/splash_screen';
-
-  static const String loginScreen = '/login_screen';
-
   static const String signupScreen = '/signup_screen';
 
   static const String dashboardContainerScreen = '/dashboard_container_screen';
@@ -68,20 +60,6 @@ class AppRoutes {
   static String initialRoute = '/initialRoute';
 
   static List<GetPage> pages = [
-    GetPage(
-      name: splashScreen,
-      page: () => SplashScreen(),
-      bindings: [
-        SplashBinding(),
-      ],
-    ),
-    GetPage(
-      name: loginScreen,
-      page: () => LoginScreen(),
-      bindings: [
-        LoginBinding(),
-      ],
-    ),
     GetPage(
       name: signupScreen,
       page: () => SignupScreen(),
@@ -168,9 +146,9 @@ class AppRoutes {
     ),
     GetPage(
       name: initialRoute,
-      page: () => SplashScreen(),
+      page: () => SignupScreen(),
       bindings: [
-        SplashBinding(),
+        SignupBinding(),
       ],
     )
   ];

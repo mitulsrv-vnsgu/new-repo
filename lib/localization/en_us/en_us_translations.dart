@@ -175,7 +175,6 @@ final Map<String, String> enUs = {
   "lbl_see_all": "See all",
   "lbl_sat": "Sat",
   "lbl_07_00_pm": "07:00 PM",
-  "lbl_splash_screen": "Splash Screen",
   "lbl_my_saved": "My Saved",
   "msg_you_can_consult": "You can consult your problem to the doctor",
   "msg_the_horror_of_the":

@@ -3,7 +3,7 @@ import 'package:mitul_s_application38/core/app_export.dart';
 
 class AppStyle {
   static TextStyle txtPoppinsBold16 = TextStyle(
-    color: ColorConstant.gray900,
+    color: ColorConstant.indigo900,
     fontSize: getFontSize(
       16,
     ),
@@ -56,15 +56,6 @@ class AppStyle {
     fontWeight: FontWeight.w700,
   );
 
-  static TextStyle txtPoppinsRegular12WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w400,
-  );
-
   static TextStyle txtInterMedium9Cyan300 = TextStyle(
     color: ColorConstant.cyan300,
     fontSize: getFontSize(
@@ -72,15 +63,6 @@ class AppStyle {
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtPoppinsBold16Indigo900 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w700,
   );
 
   static TextStyle txtInterSemiBold16WhiteA700 = TextStyle(
@@ -111,7 +93,7 @@ class AppStyle {
   );
 
   static TextStyle txtPoppinsRegular12 = TextStyle(
-    color: ColorConstant.gray50,
+    color: ColorConstant.whiteA700,
     fontSize: getFontSize(
       12,
     ),
