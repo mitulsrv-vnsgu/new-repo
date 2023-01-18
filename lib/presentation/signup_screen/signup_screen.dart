@@ -27,19 +27,17 @@ class SignupScreen extends GetWidget<SignupController> {
                           child: Text("msg_let_s_get_started".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: AppStyle.txtPoppinsBold16Indigo900
-                                  .copyWith(
-                                      letterSpacing: getHorizontalSize(0.50),
-                                      height: getVerticalSize(1.00)))),
+                              style: AppStyle.txtPoppinsBold16.copyWith(
+                                  letterSpacing: getHorizontalSize(0.50),
+                                  height: getVerticalSize(1.00)))),
                       Padding(
                           padding: getPadding(left: 15, top: 9, right: 15),
                           child: Text("msg_create_an_new_account".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: AppStyle.txtPoppinsRegular12WhiteA700
-                                  .copyWith(
-                                      letterSpacing: getHorizontalSize(0.50),
-                                      height: getVerticalSize(1.20)))),
+                              style: AppStyle.txtPoppinsRegular12.copyWith(
+                                  letterSpacing: getHorizontalSize(0.50),
+                                  height: getVerticalSize(1.20)))),
                       CustomTextFormField(
                           width: 343,
                           focusNode: FocusNode(),
