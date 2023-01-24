@@ -1,4 +1,3 @@
-import 'controller/chat_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -7,13 +6,15 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class ChatScreen extends GetWidget<ChatController> {
+class ChatScreen extends StatelessWidget {
+  TextEditingController chatboxController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         backgroundColor: ColorConstant.whiteA700,
+        resizeToAvoidBottomInset: false,
         appBar: CustomAppBar(
           height: getVerticalSize(
             56.00,
@@ -37,7 +38,7 @@ class ChatScreen extends GetWidget<ChatController> {
           title: Row(
             children: [
               AppbarSubtitle(
-                text: "msg_dr_marcus_horizon".tr,
+                text: "Dr. Marcus Horizon",
                 margin: getMargin(
                   left: 18,
                   top: 16,
@@ -115,7 +116,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         right: 42,
                       ),
                       child: Text(
-                        "msg_consultion_start".tr,
+                        "Consultion Start",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16Cyan300.copyWith(
@@ -133,7 +134,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         bottom: 16,
                       ),
                       child: Text(
-                        "msg_you_can_consult".tr,
+                        "You can consult your problem to the doctor",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterMedium12.copyWith(
@@ -176,7 +177,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "msg_dr_marcus_horizon".tr,
+                            "Dr. Marcus Horizon",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -191,7 +192,7 @@ class ChatScreen extends GetWidget<ChatController> {
                               right: 10,
                             ),
                             child: Text(
-                              "lbl_10_min_ago".tr,
+                              "10 min ago",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -210,7 +211,7 @@ class ChatScreen extends GetWidget<ChatController> {
               CustomButton(
                 height: 36,
                 width: 205,
-                text: "msg_hello_how_can_i".tr,
+                text: "Hello, How can i help you?",
                 margin: getMargin(
                   top: 10,
                   right: 10,
@@ -246,7 +247,7 @@ class ChatScreen extends GetWidget<ChatController> {
                           bottom: 13,
                         ),
                         child: Text(
-                          "msg_i_have_suffering".tr,
+                          "I have suffering from headache \nand cold for 3 days, I took 2 \ntablets of dolo, but still pain",
                           maxLines: null,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14WhiteA700.copyWith(
@@ -290,7 +291,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "msg_dr_marcus_horizon".tr,
+                            "Dr. Marcus Horizon",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -305,7 +306,7 @@ class ChatScreen extends GetWidget<ChatController> {
                               right: 10,
                             ),
                             child: Text(
-                              "lbl_5_min_ago".tr,
+                              "5 min ago",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -344,7 +345,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         all: 13,
                       ),
                       child: Text(
-                        "msg_ok_do_you_have".tr,
+                        "Ok, Do you have fever? is the\nheadchace severe",
                         maxLines: null,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -385,7 +386,7 @@ class ChatScreen extends GetWidget<ChatController> {
                             bottom: 11,
                           ),
                           child: Text(
-                            "msg_i_don_t_have_any2".tr,
+                            "I don,t have any fever, \nbut headchace is painful",
                             maxLines: null,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterRegular14WhiteA700.copyWith(
@@ -430,7 +431,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "msg_dr_marcus_horizon".tr,
+                            "Dr. Marcus Horizon",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -445,7 +446,7 @@ class ChatScreen extends GetWidget<ChatController> {
                               right: 10,
                             ),
                             child: Text(
-                              "lbl_online".tr,
+                              "Online",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -470,7 +471,23 @@ class ChatScreen extends GetWidget<ChatController> {
                 ),
                 color: ColorConstant.bluegray50,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadiusStyle.customBorderBL5,
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(
+                      getHorizontalSize(
+                        5.00,
+                      ),
+                    ),
+                    bottomLeft: Radius.circular(
+                      getHorizontalSize(
+                        5.00,
+                      ),
+                    ),
+                    bottomRight: Radius.circular(
+                      getHorizontalSize(
+                        5.00,
+                      ),
+                    ),
+                  ),
                 ),
                 child: Container(
                   height: getVerticalSize(
@@ -522,8 +539,8 @@ class ChatScreen extends GetWidget<ChatController> {
               CustomTextFormField(
                 width: 206,
                 focusNode: FocusNode(),
-                controller: controller.chatboxController,
-                hintText: "msg_type_message".tr,
+                controller: chatboxController,
+                hintText: "Type message ...",
                 margin: getMargin(
                   bottom: 1,
                 ),
@@ -549,7 +566,7 @@ class ChatScreen extends GetWidget<ChatController> {
               CustomButton(
                 height: 50,
                 width: 111,
-                text: "lbl_send".tr,
+                text: "Send",
               ),
             ],
           ),

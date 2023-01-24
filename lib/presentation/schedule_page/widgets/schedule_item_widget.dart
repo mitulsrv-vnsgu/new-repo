@@ -1,16 +1,10 @@
-import '../controller/schedule_controller.dart';
-import '../models/schedule_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 
 // ignore: must_be_immutable
 class ScheduleItemWidget extends StatelessWidget {
-  ScheduleItemWidget(this.scheduleItemModelObj);
-
-  ScheduleItemModel scheduleItemModelObj;
-
-  var controller = Get.find<ScheduleController>();
+  ScheduleItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +38,7 @@ class ScheduleItemWidget extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "msg_dr_marcus_horizon".tr,
+                          "Dr. Marcus Horizon",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold18.copyWith(
@@ -59,7 +53,7 @@ class ScheduleItemWidget extends StatelessWidget {
                             right: 10,
                           ),
                           child: Text(
-                            "lbl_chardiologist".tr,
+                            "Chardiologist",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterMedium12.copyWith(
@@ -118,7 +112,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     top: 1,
                   ),
                   child: Text(
-                    "lbl_26_06_2021".tr,
+                    "26/06/2021",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium12Gray700.copyWith(
@@ -149,7 +143,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     bottom: 1,
                   ),
                   child: Text(
-                    "lbl_10_30_am".tr,
+                    "10:30 AM",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium12Gray700.copyWith(
@@ -186,7 +180,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     bottom: 1,
                   ),
                   child: Text(
-                    "lbl_confirmed".tr,
+                    "Confirmed",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium12Gray700.copyWith(
@@ -216,14 +210,14 @@ class ScheduleItemWidget extends StatelessWidget {
                   CustomButton(
                     height: 46,
                     width: 145,
-                    text: "lbl_cancel".tr,
+                    text: "Cancel",
                     variant: ButtonVariant.FillBluegray50,
                     fontStyle: ButtonFontStyle.InterSemiBold14Gray700,
                   ),
                   CustomButton(
                     height: 46,
                     width: 145,
-                    text: "lbl_reschedule".tr,
+                    text: "Reschedule",
                   ),
                 ],
               ),

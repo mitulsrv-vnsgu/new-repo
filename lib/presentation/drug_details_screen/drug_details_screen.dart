@@ -1,4 +1,3 @@
-import 'controller/drug_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -7,7 +6,7 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_icon_button.dart';
 
-class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
+class DrugDetailsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -22,7 +21,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                     svgPath: ImageConstant.imgArrowdown,
                     margin: getMargin(left: 21, top: 16, bottom: 16)),
                 centerTitle: true,
-                title: AppbarSubtitle(text: "lbl_drugs_detail".tr),
+                title: AppbarSubtitle(text: "Drugs detail"),
                 actions: [
                   AppbarImage(
                       height: getSize(24.00),
@@ -55,7 +54,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("lbl_obh_combi".tr,
+                                      Text("OBH Combi",
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
                                           style: AppStyle.txtInterSemiBold20
@@ -65,7 +64,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                       Padding(
                                           padding:
                                               getPadding(top: 7, right: 10),
-                                          child: Text("lbl_75ml".tr,
+                                          child: Text("75ml",
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: AppStyle
@@ -120,7 +119,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                                 Padding(
                                                     padding:
                                                         getPadding(left: 5),
-                                                    child: Text("lbl_4_0".tr,
+                                                    child: Text("4.0",
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         textAlign:
@@ -161,7 +160,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                           Padding(
                                               padding: getPadding(
                                                   left: 23, top: 1, bottom: 1),
-                                              child: Text("lbl_1".tr,
+                                              child: Text("1",
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.left,
@@ -180,7 +179,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                         ])),
                                 Padding(
                                     padding: getPadding(top: 1),
-                                    child: Text("lbl_9_99".tr,
+                                    child: Text("\$9.99",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterSemiBold26
@@ -189,7 +188,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                               ])),
                       Padding(
                           padding: getPadding(left: 1, top: 39, right: 10),
-                          child: Text("lbl_description".tr,
+                          child: Text("Description",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterSemiBold16
@@ -202,7 +201,8 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                               child: RichText(
                                   text: TextSpan(children: [
                                     TextSpan(
-                                        text: "msg_obh_combi_is_a2".tr,
+                                        text:
+                                            "OBH COMBI  is a cough medicine containing, Paracetamol, Ephedrine HCl, and Chlorphenamine maleate which is used to relieve coughs accompanied by flu symptoms such as fever, headache, and sneezing... ",
                                         style: TextStyle(
                                             color: ColorConstant.gray500,
                                             fontSize: getFontSize(12),
@@ -210,7 +210,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                                             fontWeight: FontWeight.w400,
                                             height: getVerticalSize(1.38))),
                                     TextSpan(
-                                        text: "lbl_read_more".tr,
+                                        text: "Read more",
                                         style: TextStyle(
                                             color: ColorConstant.cyan300,
                                             fontSize: getFontSize(12),
@@ -237,12 +237,12 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                       CustomButton(
                           height: 50,
                           width: 266,
-                          text: "lbl_buy_now".tr,
-                          onTap: onTapBuynow)
+                          text: "Buy Now",
+                          onTap: () => onTapBuynow(context))
                     ]))));
   }
 
-  onTapBuynow() {
-    Get.toNamed(AppRoutes.cartScreen);
+  onTapBuynow(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.cartScreen);
   }
 }

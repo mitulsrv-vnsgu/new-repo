@@ -1,4 +1,3 @@
-import 'controller/ambulance_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -7,7 +6,9 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class AmbulanceScreen extends GetWidget<AmbulanceController> {
+class AmbulanceScreen extends StatelessWidget {
+  TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -34,7 +35,7 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "lbl_ambulance".tr,
+            text: "Ambulance",
           ),
           styleType: Style.bgFillWhiteA700,
         ),
@@ -75,8 +76,8 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                       CustomTextFormField(
                         width: 355,
                         focusNode: FocusNode(),
-                        controller: controller.searchController,
-                        hintText: "msg_search_location".tr,
+                        controller: searchController,
+                        hintText: "Search location, ZIP code..",
                         variant: TextFormFieldVariant.FillWhiteA700,
                         shape: TextFormFieldShape.RoundedBorder8,
                         padding: TextFormFieldPadding.PaddingAll10,
@@ -157,7 +158,7 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                                       left: 32,
                                     ),
                                     child: Text(
-                                      "msg_2640_cabin_creek".tr,
+                                      "2640 Cabin Creek Rd #102 Alexandria, Virginia(VA), 22314",
                                       maxLines: null,
                                       textAlign: TextAlign.center,
                                       style:
@@ -174,7 +175,7 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                             CustomButton(
                               height: 50,
                               width: 335,
-                              text: "msg_confirm_location".tr,
+                              text: "Confirm Location",
                               margin: getMargin(
                                 left: 10,
                                 top: 15,

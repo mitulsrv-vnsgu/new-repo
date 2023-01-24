@@ -1,15 +1,9 @@
-import '../controller/cart_controller.dart';
-import '../models/cart_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class CartItemWidget extends StatelessWidget {
-  CartItemWidget(this.cartItemModelObj);
-
-  CartItemModel cartItemModelObj;
-
-  var controller = Get.find<CartController>();
+  CartItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +42,7 @@ class CartItemWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "lbl_obh_combi".tr,
+                    "OBH Combi",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold18.copyWith(
@@ -63,7 +57,7 @@ class CartItemWidget extends StatelessWidget {
                       right: 10,
                     ),
                     child: Text(
-                      "lbl_75ml".tr,
+                      "75ml",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterMedium12.copyWith(
@@ -101,7 +95,7 @@ class CartItemWidget extends StatelessWidget {
                             left: 10,
                           ),
                           child: Text(
-                            "lbl_1".tr,
+                            "1",
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold16.copyWith(
@@ -161,7 +155,7 @@ class CartItemWidget extends StatelessWidget {
                         top: 47,
                       ),
                       child: Text(
-                        "lbl_9_99".tr,
+                        "\$9.99",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold18.copyWith(

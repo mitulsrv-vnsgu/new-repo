@@ -1,7 +1,4 @@
 import '../message_page/widgets/message_item_widget.dart';
-import 'controller/message_controller.dart';
-import 'models/message_item_model.dart';
-import 'models/message_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -10,10 +7,7 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_floating_button.dart';
 
-// ignore_for_file: must_be_immutable
 class MessagePage extends StatelessWidget {
-  MessageController controller = Get.put(MessageController(MessageModel().obs));
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,8 +15,8 @@ class MessagePage extends StatelessWidget {
             backgroundColor: ColorConstant.whiteA700,
             appBar: CustomAppBar(
                 height: getVerticalSize(56.00),
-                title: AppbarTitle(
-                    text: "lbl_message".tr, margin: getMargin(left: 21)),
+                title:
+                    AppbarTitle(text: "Message", margin: getMargin(left: 21)),
                 actions: [
                   Container(
                       height: getVerticalSize(28.00),
@@ -58,10 +52,10 @@ class MessagePage extends StatelessWidget {
                               mainAxisSize: MainAxisSize.max,
                               children: [
                                 CustomButton(
-                                    height: 46, width: 104, text: "lbl_all".tr),
+                                    height: 46, width: 104, text: "All"),
                                 Padding(
                                     padding: getPadding(top: 15, bottom: 13),
-                                    child: Text("lbl_group".tr,
+                                    child: Text("Group",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterRegular14
@@ -71,7 +65,7 @@ class MessagePage extends StatelessWidget {
                                 Padding(
                                     padding: getPadding(
                                         top: 14, right: 42, bottom: 14),
-                                    child: Text("lbl_private".tr,
+                                    child: Text("Private",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterRegular14
@@ -80,22 +74,17 @@ class MessagePage extends StatelessWidget {
                               ])),
                       Padding(
                           padding: getPadding(left: 1, top: 31),
-                          child: Obx(() => ListView.separated(
+                          child: ListView.separated(
                               physics: BouncingScrollPhysics(),
                               shrinkWrap: true,
                               separatorBuilder: (context, index) {
                                 return SizedBox(height: getVerticalSize(24.00));
                               },
-                              itemCount: controller
-                                  .messageModelObj.value.messageItemList.length,
+                              itemCount: 3,
                               itemBuilder: (context, index) {
-                                MessageItemModel model = controller
-                                    .messageModelObj
-                                    .value
-                                    .messageItemList[index];
-                                return MessageItemWidget(model,
-                                    onTapChat: onTapChat);
-                              })))
+                                return MessageItemWidget(
+                                    onTapChat: () => onTapChat(context));
+                              }))
                     ])),
             floatingActionButton: CustomFloatingButton(
                 height: 55,
@@ -106,7 +95,7 @@ class MessagePage extends StatelessWidget {
                     width: getHorizontalSize(27.50)))));
   }
 
-  onTapChat() {
-    Get.toNamed(AppRoutes.chatScreen);
+  onTapChat(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.chatScreen);
   }
 }

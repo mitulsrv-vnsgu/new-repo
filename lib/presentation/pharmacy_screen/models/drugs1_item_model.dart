@@ -1,1 +1,0 @@
-class Drugs1ItemModel {}

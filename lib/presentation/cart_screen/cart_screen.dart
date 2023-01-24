@@ -1,6 +1,4 @@
 import '../cart_screen/widgets/cart_item_widget.dart';
-import 'controller/cart_controller.dart';
-import 'models/cart_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -8,7 +6,7 @@ import 'package:mitul_s_application38/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 
-class CartScreen extends GetWidget<CartController> {
+class CartScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -35,7 +33,7 @@ class CartScreen extends GetWidget<CartController> {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "lbl_my_cart".tr,
+            text: "My Cart",
           ),
         ),
         body: Padding(
@@ -54,27 +52,20 @@ class CartScreen extends GetWidget<CartController> {
                   padding: getPadding(
                     left: 1,
                   ),
-                  child: Obx(
-                    () => ListView.separated(
-                      physics: BouncingScrollPhysics(),
-                      shrinkWrap: true,
-                      separatorBuilder: (context, index) {
-                        return SizedBox(
-                          height: getVerticalSize(
-                            25.00,
-                          ),
-                        );
-                      },
-                      itemCount:
-                          controller.cartModelObj.value.cartItemList.length,
-                      itemBuilder: (context, index) {
-                        CartItemModel model =
-                            controller.cartModelObj.value.cartItemList[index];
-                        return CartItemWidget(
-                          model,
-                        );
-                      },
-                    ),
+                  child: ListView.separated(
+                    physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return SizedBox(
+                        height: getVerticalSize(
+                          25.00,
+                        ),
+                      );
+                    },
+                    itemCount: 2,
+                    itemBuilder: (context, index) {
+                      return CartItemWidget();
+                    },
                   ),
                 ),
               ),
@@ -84,7 +75,7 @@ class CartScreen extends GetWidget<CartController> {
                   right: 10,
                 ),
                 child: Text(
-                  "lbl_payment_detail".tr,
+                  "Payment Detail",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -111,7 +102,7 @@ class CartScreen extends GetWidget<CartController> {
                           top: 1,
                         ),
                         child: Text(
-                          "lbl_subtotal".tr,
+                          "Subtotal",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -126,7 +117,7 @@ class CartScreen extends GetWidget<CartController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_19_98".tr,
+                          "\$19.98",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -154,7 +145,7 @@ class CartScreen extends GetWidget<CartController> {
                         top: 1,
                       ),
                       child: Text(
-                        "lbl_taxes".tr,
+                        "Taxes",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -169,7 +160,7 @@ class CartScreen extends GetWidget<CartController> {
                         bottom: 1,
                       ),
                       child: Text(
-                        "lbl_1_00".tr,
+                        "\$1.00",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -196,7 +187,7 @@ class CartScreen extends GetWidget<CartController> {
                         top: 1,
                       ),
                       child: Text(
-                        "lbl_total".tr,
+                        "Total",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -211,7 +202,7 @@ class CartScreen extends GetWidget<CartController> {
                         bottom: 1,
                       ),
                       child: Text(
-                        "lbl_20_98".tr,
+                        "\$20.98",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -245,7 +236,7 @@ class CartScreen extends GetWidget<CartController> {
                   right: 10,
                 ),
                 child: Text(
-                  "lbl_payment_method".tr,
+                  "Payment Method",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -277,7 +268,7 @@ class CartScreen extends GetWidget<CartController> {
                           bottom: 14,
                         ),
                         child: Text(
-                          "lbl_visa".tr,
+                          "VISA",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterBlackItalic16.copyWith(
@@ -294,7 +285,7 @@ class CartScreen extends GetWidget<CartController> {
                           bottom: 15,
                         ),
                         child: Text(
-                          "lbl_change".tr,
+                          "Change",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -337,7 +328,7 @@ class CartScreen extends GetWidget<CartController> {
                         right: 10,
                       ),
                       child: Text(
-                        "lbl_total".tr,
+                        "Total",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterMedium14.copyWith(
@@ -352,7 +343,7 @@ class CartScreen extends GetWidget<CartController> {
                         top: 1,
                       ),
                       child: Text(
-                        "lbl_20_982".tr,
+                        "\$ 20.98",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold18.copyWith(
@@ -368,7 +359,7 @@ class CartScreen extends GetWidget<CartController> {
               CustomButton(
                 height: 50,
                 width: 192,
-                text: "lbl_checkout".tr,
+                text: "Checkout",
               ),
             ],
           ),

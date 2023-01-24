@@ -1,15 +1,9 @@
-import '../controller/settigns_controller.dart';
-import '../models/settigns_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class SettignsItemWidget extends StatelessWidget {
-  SettignsItemWidget(this.settignsItemModelObj);
-
-  SettignsItemModel settignsItemModelObj;
-
-  var controller = Get.find<SettignsController>();
+  SettignsItemWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +36,7 @@ class SettignsItemWidget extends StatelessWidget {
                 right: 7,
               ),
               child: Text(
-                "lbl_heart_rate".tr,
+                "Heart rate",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
                 style: AppStyle.txtInterSemiBold10.copyWith(
@@ -59,7 +53,7 @@ class SettignsItemWidget extends StatelessWidget {
                   top: 2,
                 ),
                 child: Text(
-                  "lbl_215bpm".tr,
+                  "215bpm",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16WhiteA700.copyWith(

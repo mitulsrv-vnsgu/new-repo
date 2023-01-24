@@ -1,16 +1,10 @@
 import '../settigns_page/widgets/settigns_item_widget.dart';
-import 'controller/settigns_controller.dart';
-import 'models/settigns_item_model.dart';
-import 'models/settigns_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/custom_icon_button.dart';
 
 // ignore_for_file: must_be_immutable
 class SettignsPage extends StatelessWidget {
-  SettignsController controller =
-      Get.put(SettignsController(SettignsModel().obs));
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -97,8 +91,11 @@ class SettignsPage extends StatelessWidget {
                                     ),
                                     color: ColorConstant.whiteA700,
                                     shape: RoundedRectangleBorder(
-                                      borderRadius:
-                                          BorderRadiusStyle.circleBorder8,
+                                      borderRadius: BorderRadius.circular(
+                                        getHorizontalSize(
+                                          8.00,
+                                        ),
+                                      ),
                                     ),
                                     child: Container(
                                       height: getSize(
@@ -142,7 +139,7 @@ class SettignsPage extends StatelessWidget {
                               right: 20,
                             ),
                             child: Text(
-                              "lbl_amelia_renata".tr,
+                              "Amelia Renata",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style:
@@ -157,40 +154,31 @@ class SettignsPage extends StatelessWidget {
                             height: getVerticalSize(
                               101.00,
                             ),
-                            child: Obx(
-                              () => ListView.separated(
-                                padding: getPadding(
-                                  left: 20,
-                                  top: 29,
-                                  right: 20,
-                                ),
-                                scrollDirection: Axis.horizontal,
-                                physics: BouncingScrollPhysics(),
-                                separatorBuilder: (context, index) {
-                                  return Container(
-                                    height: getVerticalSize(
-                                      44.00,
-                                    ),
-                                    width: getHorizontalSize(
-                                      1.00,
-                                    ),
-                                    decoration: BoxDecoration(
-                                      color: ColorConstant.cyan100,
-                                    ),
-                                  );
-                                },
-                                itemCount: controller.settignsModelObj.value
-                                    .settignsItemList.length,
-                                itemBuilder: (context, index) {
-                                  SettignsItemModel model = controller
-                                      .settignsModelObj
-                                      .value
-                                      .settignsItemList[index];
-                                  return SettignsItemWidget(
-                                    model,
-                                  );
-                                },
+                            child: ListView.separated(
+                              padding: getPadding(
+                                left: 20,
+                                top: 29,
+                                right: 20,
                               ),
+                              scrollDirection: Axis.horizontal,
+                              physics: BouncingScrollPhysics(),
+                              separatorBuilder: (context, index) {
+                                return Container(
+                                  height: getVerticalSize(
+                                    44.00,
+                                  ),
+                                  width: getHorizontalSize(
+                                    1.00,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: ColorConstant.cyan100,
+                                  ),
+                                );
+                              },
+                              itemCount: 3,
+                              itemBuilder: (context, index) {
+                                return SettignsItemWidget();
+                              },
                             ),
                           ),
                           Align(
@@ -241,7 +229,7 @@ class SettignsPage extends StatelessWidget {
                                                 bottom: 10,
                                               ),
                                               child: Text(
-                                                "lbl_my_saved".tr,
+                                                "My Saved",
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
@@ -320,7 +308,7 @@ class SettignsPage extends StatelessWidget {
                                                 bottom: 10,
                                               ),
                                               child: Text(
-                                                "lbl_appointmnet".tr,
+                                                "Appointmnet",
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
@@ -399,7 +387,7 @@ class SettignsPage extends StatelessWidget {
                                                 bottom: 10,
                                               ),
                                               child: Text(
-                                                "lbl_payment_method".tr,
+                                                "Payment Method",
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
@@ -478,7 +466,7 @@ class SettignsPage extends StatelessWidget {
                                                 bottom: 11,
                                               ),
                                               child: Text(
-                                                "lbl_faqs".tr,
+                                                "FAQs",
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
@@ -558,7 +546,7 @@ class SettignsPage extends StatelessWidget {
                                                 bottom: 10,
                                               ),
                                               child: Text(
-                                                "lbl_help".tr,
+                                                "Help",
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle

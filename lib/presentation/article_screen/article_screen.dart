@@ -1,6 +1,4 @@
 import '../article_screen/widgets/article_item_widget.dart';
-import 'controller/article_controller.dart';
-import 'models/article_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -8,13 +6,15 @@ import 'package:mitul_s_application38/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class ArticleScreen extends GetWidget<ArticleController> {
+class ArticleScreen extends StatelessWidget {
+  TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
         backgroundColor: ColorConstant.whiteA700,
+        resizeToAvoidBottomInset: false,
         appBar: CustomAppBar(
           height: getVerticalSize(
             56.00,
@@ -36,7 +36,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "lbl_articles".tr,
+            text: "Articles",
           ),
           actions: [
             AppbarImage(
@@ -62,8 +62,8 @@ class ArticleScreen extends GetWidget<ArticleController> {
               CustomTextFormField(
                 width: 335,
                 focusNode: FocusNode(),
-                controller: controller.searchController,
-                hintText: "msg_search_articles".tr,
+                controller: searchController,
+                hintText: "Search articles, news...",
                 margin: getMargin(
                   left: 20,
                   top: 23,
@@ -100,7 +100,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                     right: 20,
                   ),
                   child: Text(
-                    "msg_popular_articles".tr,
+                    "Popular Articles",
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -133,7 +133,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "lbl_covid_19".tr,
+                        "Covid-19",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -157,7 +157,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "lbl_diet".tr,
+                        "Diet",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -181,7 +181,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "lbl_fitness".tr,
+                        "Fitness",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -206,7 +206,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "msg_trending_articles".tr,
+                      "Trending Articles",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -221,7 +221,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         bottom: 3,
                       ),
                       child: Text(
-                        "lbl_see_all".tr,
+                        "See all",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular12Cyan300.copyWith(
@@ -265,7 +265,11 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusStyle.circleBorder8,
+                                borderRadius: BorderRadius.circular(
+                                  getHorizontalSize(
+                                    8.00,
+                                  ),
+                                ),
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -307,7 +311,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               right: 13,
                             ),
                             child: Text(
-                              "lbl_covid_19".tr,
+                              "Covid-19",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium9Cyan300.copyWith(
@@ -327,7 +331,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               right: 10,
                             ),
                             child: Text(
-                              "msg_comparing_the_astrazeneca".tr,
+                              "Comparing the \nAstraZeneca and \nSinovac COVID-19 \nVaccines",
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style:
@@ -355,7 +359,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     top: 1,
                                   ),
                                   child: Text(
-                                    "lbl_jun_12_2021".tr,
+                                    "Jun 12, 2021",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9.copyWith(
@@ -392,7 +396,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     bottom: 1,
                                   ),
                                   child: Text(
-                                    "lbl_6_min_read".tr,
+                                    "6 min read",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9Cyan300
@@ -432,7 +436,11 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadiusStyle.circleBorder8,
+                                borderRadius: BorderRadius.circular(
+                                  getHorizontalSize(
+                                    8.00,
+                                  ),
+                                ),
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -474,7 +482,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               right: 13,
                             ),
                             child: Text(
-                              "lbl_covid_19".tr,
+                              "Covid-19",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium9Cyan300.copyWith(
@@ -494,7 +502,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                               right: 10,
                             ),
                             child: Text(
-                              "msg_the_horror_of_the".tr,
+                              "The Horror Of The \nSecond Wave Of \nCOVID-19 \npandemic",
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style:
@@ -522,7 +530,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     top: 1,
                                   ),
                                   child: Text(
-                                    "lbl_jun_10_20212".tr,
+                                    "Jun 10, 2021",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9.copyWith(
@@ -559,7 +567,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                     bottom: 1,
                                   ),
                                   child: Text(
-                                    "lbl_5_min_read2".tr,
+                                    "5 min read",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9Cyan300
@@ -591,7 +599,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "msg_related_articles".tr,
+                      "Related Articles",
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -606,7 +614,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                         bottom: 1,
                       ),
                       child: Text(
-                        "lbl_see_all".tr,
+                        "See all",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular12Cyan300.copyWith(
@@ -626,27 +634,20 @@ class ArticleScreen extends GetWidget<ArticleController> {
                   right: 20,
                   bottom: 58,
                 ),
-                child: Obx(
-                  () => ListView.separated(
-                    physics: BouncingScrollPhysics(),
-                    shrinkWrap: true,
-                    separatorBuilder: (context, index) {
-                      return SizedBox(
-                        height: getVerticalSize(
-                          10.00,
-                        ),
-                      );
-                    },
-                    itemCount:
-                        controller.articleModelObj.value.articleItemList.length,
-                    itemBuilder: (context, index) {
-                      ArticleItemModel model = controller
-                          .articleModelObj.value.articleItemList[index];
-                      return ArticleItemWidget(
-                        model,
-                      );
-                    },
-                  ),
+                child: ListView.separated(
+                  physics: BouncingScrollPhysics(),
+                  shrinkWrap: true,
+                  separatorBuilder: (context, index) {
+                    return SizedBox(
+                      height: getVerticalSize(
+                        10.00,
+                      ),
+                    );
+                  },
+                  itemCount: 2,
+                  itemBuilder: (context, index) {
+                    return ArticleItemWidget();
+                  },
                 ),
               ),
             ],

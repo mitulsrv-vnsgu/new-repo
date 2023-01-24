@@ -1,4 +1,3 @@
-import 'controller/book_an_appointment_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -6,7 +5,7 @@ import 'package:mitul_s_application38/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 
-class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
+class BookAnAppointmentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -33,7 +32,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "lbl_apointment".tr,
+            text: "Apointment",
           ),
         ),
         body: Padding(
@@ -85,7 +84,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "msg_dr_marcus_horizon".tr,
+                              "Dr. Marcus Horizon",
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterSemiBold18.copyWith(
@@ -100,7 +99,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                                 right: 10,
                               ),
                               child: Text(
-                                "lbl_chardiologist".tr,
+                                "Chardiologist",
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtInterMedium12.copyWith(
@@ -139,7 +138,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                                       top: 1,
                                     ),
                                     child: Text(
-                                      "lbl_4_7".tr,
+                                      "4,7",
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtInterMedium12Cyan300
@@ -181,7 +180,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                                       top: 1,
                                     ),
                                     child: Text(
-                                      "lbl_800m_away".tr,
+                                      "800m away",
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtInterMedium12.copyWith(
@@ -214,7 +213,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        "lbl_date".tr,
+                        "Date",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16.copyWith(
@@ -229,7 +228,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_change".tr,
+                          "Change",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -270,7 +269,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                         bottom: 9,
                       ),
                       child: Text(
-                        "msg_wednesday_jun_23".tr,
+                        "Wednesday, Jun 23, 2021 | 10:00 AM",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -314,7 +313,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        "lbl_reason".tr,
+                        "Reason",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16.copyWith(
@@ -329,7 +328,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_change".tr,
+                          "Change",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -360,7 +359,11 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                       margin: EdgeInsets.all(0),
                       color: ColorConstant.bluegray50,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadiusStyle.circleBorder18,
+                        borderRadius: BorderRadius.circular(
+                          getHorizontalSize(
+                            18.00,
+                          ),
+                        ),
                       ),
                       child: Container(
                         height: getSize(
@@ -398,7 +401,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                         bottom: 7,
                       ),
                       child: Text(
-                        "lbl_chest_pain".tr,
+                        "Chest pain",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -436,7 +439,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                   right: 10,
                 ),
                 child: Text(
-                  "lbl_payment_detail".tr,
+                  "Payment Detail",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -463,7 +466,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_consultation".tr,
+                          "Consultation",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -478,7 +481,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           top: 1,
                         ),
                         child: Text(
-                          "lbl_60_00".tr,
+                          "\$60.00",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -509,7 +512,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_admin_fee".tr,
+                          "Admin Fee",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -524,7 +527,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           top: 1,
                         ),
                         child: Text(
-                          "lbl_01_00".tr,
+                          "\$01.00",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -555,7 +558,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "msg_aditional_discount".tr,
+                          "Aditional Discount",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -570,7 +573,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           top: 1,
                         ),
                         child: Text(
-                          "lbl2".tr,
+                          "-",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -601,7 +604,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           top: 1,
                         ),
                         child: Text(
-                          "lbl_total".tr,
+                          "Total",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold14.copyWith(
@@ -616,7 +619,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 1,
                         ),
                         child: Text(
-                          "lbl_61_00".tr,
+                          "\$61.00",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold14.copyWith(
@@ -655,7 +658,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                   right: 10,
                 ),
                 child: Text(
-                  "lbl_payment_method".tr,
+                  "Payment Method",
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -687,7 +690,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 14,
                         ),
                         child: Text(
-                          "lbl_visa".tr,
+                          "VISA",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterBlackItalic16.copyWith(
@@ -704,7 +707,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                           bottom: 15,
                         ),
                         child: Text(
-                          "lbl_change".tr,
+                          "Change",
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -747,7 +750,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                         right: 10,
                       ),
                       child: Text(
-                        "lbl_total".tr,
+                        "Total",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterMedium14.copyWith(
@@ -762,7 +765,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
                         top: 1,
                       ),
                       child: Text(
-                        "lbl_61_002".tr,
+                        "\$ 61.00",
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold18.copyWith(
@@ -778,7 +781,7 @@ class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
               CustomButton(
                 height: 50,
                 width: 192,
-                text: "lbl_booking".tr,
+                text: "Booking",
               ),
             ],
           ),

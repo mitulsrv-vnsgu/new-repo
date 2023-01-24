@@ -1,8 +1,5 @@
 import '../pharmacy_screen/widgets/drugs1_item_widget.dart';
 import '../pharmacy_screen/widgets/drugs_item_widget.dart';
-import 'controller/pharmacy_controller.dart';
-import 'models/drugs1_item_model.dart';
-import 'models/drugs_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -11,13 +8,16 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class PharmacyScreen extends GetWidget<PharmacyController> {
+// ignore_for_file: must_be_immutable
+class PharmacyScreen extends StatelessWidget {
+  TextEditingController searchController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Scaffold(
-            resizeToAvoidBottomInset: false,
             backgroundColor: ColorConstant.whiteA700,
+            resizeToAvoidBottomInset: false,
             appBar: CustomAppBar(
                 height: getVerticalSize(56.00),
                 leadingWidth: 45,
@@ -27,7 +27,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                     svgPath: ImageConstant.imgArrowdown,
                     margin: getMargin(left: 21, top: 16, bottom: 16)),
                 centerTitle: true,
-                title: AppbarSubtitle(text: "lbl_pharmacy".tr),
+                title: AppbarSubtitle(text: "Pharmacy"),
                 actions: [
                   AppbarImage(
                       height: getSize(24.00),
@@ -45,8 +45,8 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                       CustomTextFormField(
                           width: 335,
                           focusNode: FocusNode(),
-                          controller: controller.searchController,
-                          hintText: "msg_search_drugs_category".tr,
+                          controller: searchController,
+                          hintText: "Search drugs, category...",
                           margin: getMargin(left: 20, top: 23, right: 20),
                           variant: TextFormFieldVariant.OutlineBluegray50,
                           shape: TextFormFieldShape.RoundedBorder8,
@@ -74,7 +74,8 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                     width: getHorizontalSize(176.00),
                                     margin:
                                         getMargin(left: 17, top: 20, right: 17),
-                                    child: Text("msg_order_quickly_w".tr,
+                                    child: Text(
+                                        "Order quickly with\nPrescription",
                                         maxLines: null,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterSemiBold20
@@ -84,7 +85,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                 CustomButton(
                                     height: 30,
                                     width: 150,
-                                    text: "msg_upload_prescription".tr,
+                                    text: "Upload Prescription",
                                     margin: getMargin(
                                         left: 16,
                                         top: 7,
@@ -99,7 +100,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Text("lbl_popular_product".tr,
+                                Text("Popular Product",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterSemiBold16Black900
@@ -107,7 +108,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                             height: getVerticalSize(1.00))),
                                 Padding(
                                     padding: getPadding(top: 1, bottom: 3),
-                                    child: Text("lbl_see_all".tr,
+                                    child: Text("See all",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterRegular12Cyan300
@@ -118,7 +119,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                           alignment: Alignment.centerRight,
                           child: Container(
                               height: getVerticalSize(191.00),
-                              child: Obx(() => ListView.separated(
+                              child: ListView.separated(
                                   padding: getPadding(left: 10, top: 26),
                                   scrollDirection: Axis.horizontal,
                                   physics: BouncingScrollPhysics(),
@@ -126,16 +127,11 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                     return SizedBox(
                                         height: getVerticalSize(21.00));
                                   },
-                                  itemCount: controller.pharmacyModelObj.value
-                                      .drugsItemList.length,
+                                  itemCount: 3,
                                   itemBuilder: (context, index) {
-                                    DrugsItemModel model = controller
-                                        .pharmacyModelObj
-                                        .value
-                                        .drugsItemList[index];
-                                    return DrugsItemWidget(model,
-                                        onTapDrugs: onTapDrugs);
-                                  })))),
+                                    return DrugsItemWidget(
+                                        onTapDrugs: () => onTapDrugs(context));
+                                  }))),
                       Padding(
                           padding: getPadding(left: 20, top: 19, right: 20),
                           child: Row(
@@ -143,7 +139,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisSize: MainAxisSize.max,
                               children: [
-                                Text("lbl_product_on_sale".tr,
+                                Text("Product on Sale",
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterSemiBold16Black900
@@ -151,7 +147,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                             height: getVerticalSize(1.00))),
                                 Padding(
                                     padding: getPadding(top: 2, bottom: 2),
-                                    child: Text("lbl_see_all".tr,
+                                    child: Text("See all",
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterRegular12Cyan300
@@ -162,7 +158,7 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                           alignment: Alignment.centerRight,
                           child: Container(
                               height: getVerticalSize(197.00),
-                              child: Obx(() => ListView.separated(
+                              child: ListView.separated(
                                   padding:
                                       getPadding(left: 10, top: 14, bottom: 18),
                                   scrollDirection: Axis.horizontal,
@@ -171,19 +167,14 @@ class PharmacyScreen extends GetWidget<PharmacyController> {
                                     return SizedBox(
                                         height: getVerticalSize(17.17));
                                   },
-                                  itemCount: controller.pharmacyModelObj.value
-                                      .drugs1ItemList.length,
+                                  itemCount: 3,
                                   itemBuilder: (context, index) {
-                                    Drugs1ItemModel model = controller
-                                        .pharmacyModelObj
-                                        .value
-                                        .drugs1ItemList[index];
-                                    return Drugs1ItemWidget(model);
-                                  }))))
+                                    return Drugs1ItemWidget();
+                                  })))
                     ]))));
   }
 
-  onTapDrugs() {
-    Get.toNamed(AppRoutes.drugDetailsScreen);
+  onTapDrugs(BuildContext context) {
+    Navigator.pushNamed(context, AppRoutes.drugDetailsScreen);
   }
 }
