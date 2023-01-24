@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mitul_s_application38/core/app_export.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
 
 class CustomIconButton extends StatelessWidget {
   CustomIconButton(
@@ -69,9 +69,9 @@ class CustomIconButton extends StatelessWidget {
 
   _setPadding() {
     switch (padding) {
-      case IconButtonPadding.PaddingAll14:
+      case IconButtonPadding.PaddingAll13:
         return getPadding(
-          all: 14,
+          all: 13,
         );
       default:
         return getPadding(
@@ -82,31 +82,35 @@ class CustomIconButton extends StatelessWidget {
 
   _setColor() {
     switch (variant) {
-      case IconButtonVariant.FillCyan300:
-        return ColorConstant.cyan300;
+      case IconButtonVariant.FillBlue52:
+        return ColorConstant.blue52;
+      case IconButtonVariant.FillGray40087:
+        return ColorConstant.gray40087;
+      case IconButtonVariant.FillRed50:
+        return ColorConstant.red50;
       default:
-        return ColorConstant.bluegray50;
+        return ColorConstant.blue51;
     }
   }
 
   _setBorderRadius() {
     switch (shape) {
-      case IconButtonShape.RoundedBorder15:
-        return BorderRadius.circular(
-          getHorizontalSize(
-            15.00,
-          ),
-        );
       case IconButtonShape.RoundedBorder8:
         return BorderRadius.circular(
           getHorizontalSize(
             8.00,
           ),
         );
+      case IconButtonShape.CircleBorder26:
+        return BorderRadius.circular(
+          getHorizontalSize(
+            26.00,
+          ),
+        );
       default:
         return BorderRadius.circular(
           getHorizontalSize(
-            21.00,
+            21.50,
           ),
         );
     }
@@ -115,16 +119,18 @@ class CustomIconButton extends StatelessWidget {
 
 enum IconButtonShape {
   RoundedBorder21,
-  RoundedBorder15,
   RoundedBorder8,
+  CircleBorder26,
 }
 
 enum IconButtonPadding {
   PaddingAll9,
-  PaddingAll14,
+  PaddingAll13,
 }
 
 enum IconButtonVariant {
-  FillBluegray50,
-  FillCyan300,
+  FillBlue51,
+  FillBlue52,
+  FillGray40087,
+  FillRed50,
 }

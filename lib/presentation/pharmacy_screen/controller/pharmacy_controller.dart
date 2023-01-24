@@ -1,5 +1,5 @@
-import 'package:mitul_s_application38/core/app_export.dart';
-import 'package:mitul_s_application38/presentation/pharmacy_screen/models/pharmacy_model.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
+import 'package:mitul_s_application39/presentation/pharmacy_screen/models/pharmacy_model.dart';
 import 'package:flutter/material.dart';
 
 class PharmacyController extends GetxController {

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mitul_s_application38/core/app_export.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
 
 class CustomFloatingButton extends StatelessWidget {
   CustomFloatingButton(
@@ -65,8 +65,10 @@ class CustomFloatingButton extends StatelessWidget {
 
   _setColor() {
     switch (variant) {
+      case FloatingButtonVariant.OutlineBlack90019:
+        return ColorConstant.blue600;
       default:
-        return ColorConstant.cyan300;
+        return ColorConstant.red300;
     }
   }
 
@@ -75,7 +77,7 @@ class CustomFloatingButton extends StatelessWidget {
       default:
         return BorderRadius.circular(
           getHorizontalSize(
-            27.00,
+            26.00,
           ),
         );
     }
@@ -83,7 +85,7 @@ class CustomFloatingButton extends StatelessWidget {
 
   _setBoxShadow() {
     switch (variant) {
-      default:
+      case FloatingButtonVariant.OutlineBlack90019:
         return [
           BoxShadow(
             color: ColorConstant.black90019,
@@ -99,14 +101,19 @@ class CustomFloatingButton extends StatelessWidget {
             ),
           )
         ];
+      case FloatingButtonVariant.FillRed300:
+        return null;
+      default:
+        return null;
     }
   }
 }
 
 enum FloatingButtonShape {
-  RoundedBorder27,
+  CircleBorder26,
 }
 
 enum FloatingButtonVariant {
+  FillRed300,
   OutlineBlack90019,
 }

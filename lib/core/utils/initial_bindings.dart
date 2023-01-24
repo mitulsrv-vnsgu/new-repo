@@ -1,5 +1,5 @@
-import 'package:mitul_s_application38/core/app_export.dart';
-import 'package:mitul_s_application38/data/apiClient/api_client.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
+import 'package:mitul_s_application39/data/apiClient/api_client.dart';
 
 class InitialBindings extends Bindings {
   @override
