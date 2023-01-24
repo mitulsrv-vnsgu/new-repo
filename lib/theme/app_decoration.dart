@@ -2,18 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get outlineBluegray10001 => BoxDecoration(
-        border: Border.all(
-          color: ColorConstant.bluegray10001,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
-      );
   static BoxDecoration get fillCyan300 => BoxDecoration(
-        color: ColorConstant.cyan300,
-      );
-  static BoxDecoration get txtFillCyan300 => BoxDecoration(
         color: ColorConstant.cyan300,
       );
   static BoxDecoration get fillGray400 => BoxDecoration(
@@ -111,12 +100,6 @@ class BorderRadiusStyle {
       getHorizontalSize(
         8.00,
       ),
-    ),
-  );
-
-  static BorderRadius txtRoundedBorder10 = BorderRadius.circular(
-    getHorizontalSize(
-      10.00,
     ),
   );
 

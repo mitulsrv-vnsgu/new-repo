@@ -20,24 +20,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterMedium9Cyan300 = TextStyle(
-    color: ColorConstant.cyan300,
-    fontSize: getFontSize(
-      9,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtInterSemiBold12Gray700 = TextStyle(
-    color: ColorConstant.gray700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
   static TextStyle txtInterSemiBold16WhiteA700 = TextStyle(
     color: ColorConstant.whiteA700,
     fontSize: getFontSize(
@@ -132,15 +114,6 @@ class AppStyle {
     color: ColorConstant.black900,
     fontSize: getFontSize(
       12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterSemiBold14WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      14,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
