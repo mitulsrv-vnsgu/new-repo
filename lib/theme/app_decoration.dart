@@ -2,9 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get fillCyan300 => BoxDecoration(
-        color: ColorConstant.cyan300,
-      );
   static BoxDecoration get fillGray400 => BoxDecoration(
         color: ColorConstant.gray400,
       );
@@ -64,60 +61,6 @@ class BorderRadiusStyle {
   static BorderRadius roundedBorder11 = BorderRadius.circular(
     getHorizontalSize(
       11.00,
-    ),
-  );
-
-  static BorderRadius customBorderBL5 = BorderRadius.only(
-    topRight: Radius.circular(
-      getHorizontalSize(
-        5.00,
-      ),
-    ),
-    bottomLeft: Radius.circular(
-      getHorizontalSize(
-        5.00,
-      ),
-    ),
-    bottomRight: Radius.circular(
-      getHorizontalSize(
-        5.00,
-      ),
-    ),
-  );
-
-  static BorderRadius customBorderBL8 = BorderRadius.only(
-    topRight: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
-    ),
-    bottomLeft: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
-    ),
-    bottomRight: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
-    ),
-  );
-
-  static BorderRadius customBorderTL8 = BorderRadius.only(
-    topLeft: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
-    ),
-    bottomLeft: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
-    ),
-    bottomRight: Radius.circular(
-      getHorizontalSize(
-        8.00,
-      ),
     ),
   );
 

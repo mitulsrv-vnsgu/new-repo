@@ -58,7 +58,6 @@ final Map<String, String> enUs = {
   "lbl_26": "26",
   "lbl_5_99": "\$5.99",
   "msg_search_doctor_drugs": "Search doctor, drugs, articles...",
-  "lbl_chat": "Chat",
   "lbl_4_7": "4,7",
   "lbl_4_9": "4,9",
   "lbl_4_8": "4,8",
@@ -90,7 +89,6 @@ final Map<String, String> enUs = {
   "msg_wednesday_jun_23": "Wednesday, Jun 23, 2021 | 10:00 AM",
   "msg_let_s_get_started": "Let’s Get Started",
   "lbl_5_min_read2": "5 min read",
-  "lbl_cart": "Cart",
   "msg_consultion_start": "Consultion Start",
   "lbl_messages": "Messages",
   "msg_upload_prescription": "Upload Prescription",
@@ -214,6 +212,5 @@ final Map<String, String> enUs = {
   "lbl_drug_details": "Drug Details",
   "lbl_heart_rate": "Heart rate",
   "msg_search_articles": "Search articles, news...",
-  "lbl_ambulance2": "ambulance",
   "lbl_full_name": "Full Name"
 };
