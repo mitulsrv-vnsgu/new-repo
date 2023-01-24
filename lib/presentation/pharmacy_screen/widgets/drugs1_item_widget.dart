@@ -98,7 +98,7 @@ class Drugs1ItemWidget extends StatelessWidget {
                           "lbl_9_99".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterSemiBold14Black900.copyWith(
+                          style: AppStyle.txtInterSemiBold14.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

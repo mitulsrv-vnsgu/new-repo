@@ -192,7 +192,7 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
                           child: Text("lbl_description".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style: AppStyle.txtInterSemiBold16
+                              style: AppStyle.txtInterSemiBold16Gray700
                                   .copyWith(height: getVerticalSize(1.00)))),
                       Align(
                           alignment: Alignment.center,
@@ -243,6 +243,6 @@ class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
   }
 
   onTapBuynow() {
-    Get.toNamed(AppRoutes.cartScreen);
+// TODO: implement Actions
   }
 }
