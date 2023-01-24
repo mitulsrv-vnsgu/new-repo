@@ -60,7 +60,7 @@ class MessageItemWidget extends StatelessWidget {
                           "msg_dr_marcus_horizon".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterSemiBold16.copyWith(
+                          style: AppStyle.txtInterSemiBold16Gray700.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

@@ -244,7 +244,7 @@ class SettignsPage extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
-                                                    .txtInterSemiBold16
+                                                    .txtInterSemiBold16Gray700
                                                     .copyWith(
                                                   height: getVerticalSize(
                                                     1.00,
@@ -323,7 +323,7 @@ class SettignsPage extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
-                                                    .txtInterSemiBold16
+                                                    .txtInterSemiBold16Gray700
                                                     .copyWith(
                                                   height: getVerticalSize(
                                                     1.00,
@@ -402,7 +402,7 @@ class SettignsPage extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
-                                                    .txtInterSemiBold16
+                                                    .txtInterSemiBold16Gray700
                                                     .copyWith(
                                                   height: getVerticalSize(
                                                     1.00,
@@ -481,7 +481,7 @@ class SettignsPage extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
-                                                    .txtInterSemiBold16
+                                                    .txtInterSemiBold16Gray700
                                                     .copyWith(
                                                   height: getVerticalSize(
                                                     1.00,
@@ -561,7 +561,7 @@ class SettignsPage extends StatelessWidget {
                                                 overflow: TextOverflow.ellipsis,
                                                 textAlign: TextAlign.left,
                                                 style: AppStyle
-                                                    .txtInterSemiBold16
+                                                    .txtInterSemiBold16Gray700
                                                     .copyWith(
                                                   height: getVerticalSize(
                                                     1.00,

@@ -63,53 +63,6 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapChat();
-                                            },
-                                            child: Container(
-                                                width: size.width,
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_chat".tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20
-                                                                      .copyWith(
-                                                                          height:
-                                                                              getVerticalSize(1.00))))),
-                                                      Container(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  1.00),
-                                                          width: size.width,
-                                                          margin:
-                                                              getMargin(top: 5),
-                                                          decoration: BoxDecoration(
-                                                              color: ColorConstant
-                                                                  .bluegray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
                                               onTapPharmacy();
                                             },
                                             child: Container(
@@ -298,61 +251,9 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
                                                           decoration: BoxDecoration(
                                                               color: ColorConstant
                                                                   .bluegray400))
-                                                    ]))),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapAmbulance();
-                                            },
-                                            child: Container(
-                                                width: size.width,
-                                                decoration:
-                                                    AppDecoration.fillWhiteA700,
-                                                child: Column(
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment.start,
-                                                    children: [
-                                                      Align(
-                                                          alignment: Alignment
-                                                              .centerLeft,
-                                                          child: Padding(
-                                                              padding:
-                                                                  getPadding(
-                                                                      left: 20,
-                                                                      top: 10,
-                                                                      right: 20,
-                                                                      bottom:
-                                                                          10),
-                                                              child: Text(
-                                                                  "lbl_ambulance2"
-                                                                      .tr,
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                  textAlign:
-                                                                      TextAlign
-                                                                          .center,
-                                                                  style: AppStyle
-                                                                      .txtRobotoRegular20
-                                                                      .copyWith(
-                                                                          height:
-                                                                              getVerticalSize(1.00))))),
-                                                      Container(
-                                                          height:
-                                                              getVerticalSize(
-                                                                  1.00),
-                                                          width: size.width,
-                                                          margin:
-                                                              getMargin(top: 5),
-                                                          decoration: BoxDecoration(
-                                                              color: ColorConstant
-                                                                  .bluegray400))
                                                     ])))
                                       ]))))
                     ]))));
-  }
-
-  onTapChat() {
-    Get.toNamed(AppRoutes.chatScreen);
   }
 
   onTapPharmacy() {
@@ -369,9 +270,5 @@ class AppNavigationScreen extends GetWidget<AppNavigationController> {
 
   onTapCart() {
     Get.toNamed(AppRoutes.cartScreen);
-  }
-
-  onTapAmbulance() {
-    Get.toNamed(AppRoutes.ambulanceScreen);
   }
 }

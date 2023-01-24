@@ -64,7 +64,7 @@ class MessagePage extends StatelessWidget {
                                     child: Text("lbl_group".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular14Gray700
+                                        style: AppStyle.txtInterRegular14
                                             .copyWith(
                                                 height:
                                                     getVerticalSize(1.89)))),
@@ -74,7 +74,7 @@ class MessagePage extends StatelessWidget {
                                     child: Text("lbl_private".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular14Gray700
+                                        style: AppStyle.txtInterRegular14
                                             .copyWith(
                                                 height: getVerticalSize(1.89))))
                               ])),
@@ -107,6 +107,6 @@ class MessagePage extends StatelessWidget {
   }
 
   onTapChat() {
-    Get.toNamed(AppRoutes.chatScreen);
+// TODO: implement Actions
   }
 }

@@ -64,14 +64,7 @@ class ArticleScreen extends GetWidget<ArticleController> {
                                   textAlign: TextAlign.left,
                                   style: AppStyle.txtInterSemiBold16Black900
                                       .copyWith(
-                                          height: getVerticalSize(1.00))))),
-                      Padding(
-                          padding: getPadding(left: 20, top: 13, right: 20),
-                          child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisSize: MainAxisSize.max,
-                              children: []))
+                                          height: getVerticalSize(1.00)))))
                     ]))));
   }
 }

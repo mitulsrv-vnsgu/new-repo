@@ -109,7 +109,7 @@ class SchedulePage extends StatelessWidget {
                         "lbl_completed".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.89,
                           ),
@@ -126,7 +126,7 @@ class SchedulePage extends StatelessWidget {
                         "lbl_canceled".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.89,
                           ),

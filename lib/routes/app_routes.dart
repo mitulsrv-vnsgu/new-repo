@@ -1,5 +1,3 @@
-import 'package:mitul_s_application38/presentation/chat_screen/chat_screen.dart';
-import 'package:mitul_s_application38/presentation/chat_screen/binding/chat_binding.dart';
 import 'package:mitul_s_application38/presentation/pharmacy_screen/pharmacy_screen.dart';
 import 'package:mitul_s_application38/presentation/pharmacy_screen/binding/pharmacy_binding.dart';
 import 'package:mitul_s_application38/presentation/drug_details_screen/drug_details_screen.dart';
@@ -8,15 +6,11 @@ import 'package:mitul_s_application38/presentation/article_screen/article_screen
 import 'package:mitul_s_application38/presentation/article_screen/binding/article_binding.dart';
 import 'package:mitul_s_application38/presentation/cart_screen/cart_screen.dart';
 import 'package:mitul_s_application38/presentation/cart_screen/binding/cart_binding.dart';
-import 'package:mitul_s_application38/presentation/ambulance_screen/ambulance_screen.dart';
-import 'package:mitul_s_application38/presentation/ambulance_screen/binding/ambulance_binding.dart';
 import 'package:mitul_s_application38/presentation/app_navigation_screen/app_navigation_screen.dart';
 import 'package:mitul_s_application38/presentation/app_navigation_screen/binding/app_navigation_binding.dart';
 import 'package:get/get.dart';
 
 class AppRoutes {
-  static const String chatScreen = '/chat_screen';
-
   static const String settignsPage = '/settigns_page';
 
   static const String pharmacyScreen = '/pharmacy_screen';
@@ -27,8 +21,6 @@ class AppRoutes {
 
   static const String cartScreen = '/cart_screen';
 
-  static const String ambulanceScreen = '/ambulance_screen';
-
   static const String schedulePage = '/schedule_page';
 
   static const String messagePage = '/message_page';
@@ -38,13 +30,6 @@ class AppRoutes {
   static String initialRoute = '/initialRoute';
 
   static List<GetPage> pages = [
-    GetPage(
-      name: chatScreen,
-      page: () => ChatScreen(),
-      bindings: [
-        ChatBinding(),
-      ],
-    ),
     GetPage(
       name: pharmacyScreen,
       page: () => PharmacyScreen(),
@@ -71,13 +56,6 @@ class AppRoutes {
       page: () => CartScreen(),
       bindings: [
         CartBinding(),
-      ],
-    ),
-    GetPage(
-      name: ambulanceScreen,
-      page: () => AmbulanceScreen(),
-      bindings: [
-        AmbulanceBinding(),
       ],
     ),
     GetPage(

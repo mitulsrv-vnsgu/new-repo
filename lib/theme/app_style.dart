@@ -20,8 +20,17 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterSemiBold16WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
+  static TextStyle txtInterSemiBold14Gray700 = TextStyle(
+    color: ColorConstant.gray700,
+    fontSize: getFontSize(
+      14,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle txtInterSemiBold16Gray700 = TextStyle(
+    color: ColorConstant.gray700,
     fontSize: getFontSize(
       16,
     ),
@@ -74,25 +83,7 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterMedium12 = TextStyle(
-    color: ColorConstant.gray500,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
   static TextStyle txtInterSemiBold14 = TextStyle(
-    color: ColorConstant.gray700,
-    fontSize: getFontSize(
-      14,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterSemiBold14Black900 = TextStyle(
     color: ColorConstant.black900,
     fontSize: getFontSize(
       14,
@@ -101,10 +92,10 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterMedium10 = TextStyle(
+  static TextStyle txtInterMedium12 = TextStyle(
     color: ColorConstant.gray500,
     fontSize: getFontSize(
-      10,
+      12,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w500,
@@ -129,7 +120,7 @@ class AppStyle {
   );
 
   static TextStyle txtInterSemiBold16 = TextStyle(
-    color: ColorConstant.gray700,
+    color: ColorConstant.whiteA700,
     fontSize: getFontSize(
       16,
     ),
@@ -201,15 +192,6 @@ class AppStyle {
   );
 
   static TextStyle txtInterRegular14 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      14,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtInterRegular14Gray700 = TextStyle(
     color: ColorConstant.gray700,
     fontSize: getFontSize(
       14,
@@ -231,15 +213,6 @@ class AppStyle {
     color: ColorConstant.cyan300,
     fontSize: getFontSize(
       14,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterSemiBold16Cyan300 = TextStyle(
-    color: ColorConstant.cyan300,
-    fontSize: getFontSize(
-      16,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,

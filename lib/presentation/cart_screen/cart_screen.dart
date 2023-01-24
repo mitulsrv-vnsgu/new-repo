@@ -87,7 +87,7 @@ class CartScreen extends GetWidget<CartController> {
                   "lbl_payment_detail".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterSemiBold16.copyWith(
+                  style: AppStyle.txtInterSemiBold16Gray700.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -114,7 +114,7 @@ class CartScreen extends GetWidget<CartController> {
                           "lbl_subtotal".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular14Gray700.copyWith(
+                          style: AppStyle.txtInterRegular14.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),
@@ -129,7 +129,7 @@ class CartScreen extends GetWidget<CartController> {
                           "lbl_19_98".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular14Gray700.copyWith(
+                          style: AppStyle.txtInterRegular14.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),
@@ -157,7 +157,7 @@ class CartScreen extends GetWidget<CartController> {
                         "lbl_taxes".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -172,7 +172,7 @@ class CartScreen extends GetWidget<CartController> {
                         "lbl_1_00".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -199,7 +199,7 @@ class CartScreen extends GetWidget<CartController> {
                         "lbl_total".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterSemiBold14.copyWith(
+                        style: AppStyle.txtInterSemiBold14Gray700.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -214,7 +214,7 @@ class CartScreen extends GetWidget<CartController> {
                         "lbl_20_98".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterSemiBold14.copyWith(
+                        style: AppStyle.txtInterSemiBold14Gray700.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
@@ -248,7 +248,7 @@ class CartScreen extends GetWidget<CartController> {
                   "lbl_payment_method".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterSemiBold16.copyWith(
+                  style: AppStyle.txtInterSemiBold16Gray700.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),

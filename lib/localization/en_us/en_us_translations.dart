@@ -58,7 +58,6 @@ final Map<String, String> enUs = {
   "lbl_26": "26",
   "lbl_5_99": "\$5.99",
   "msg_search_doctor_drugs": "Search doctor, drugs, articles...",
-  "lbl_chat": "Chat",
   "lbl_4_7": "4,7",
   "lbl_4_9": "4,9",
   "lbl_4_8": "4,8",
@@ -214,6 +213,5 @@ final Map<String, String> enUs = {
   "lbl_drug_details": "Drug Details",
   "lbl_heart_rate": "Heart rate",
   "msg_search_articles": "Search articles, news...",
-  "lbl_ambulance2": "ambulance",
   "lbl_full_name": "Full Name"
 };

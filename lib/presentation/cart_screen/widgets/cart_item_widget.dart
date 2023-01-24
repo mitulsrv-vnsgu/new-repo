@@ -104,7 +104,7 @@ class CartItemWidget extends StatelessWidget {
                             "lbl_1".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtInterSemiBold16.copyWith(
+                            style: AppStyle.txtInterSemiBold16Gray700.copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),
