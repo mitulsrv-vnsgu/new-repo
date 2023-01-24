@@ -1,9 +1,15 @@
+import '../controller/message_controller.dart';
+import '../models/message_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class MessageItemWidget extends StatelessWidget {
-  MessageItemWidget({this.onTapChat});
+  MessageItemWidget(this.messageItemModelObj, {this.onTapChat});
+
+  MessageItemModel messageItemModelObj;
+
+  var controller = Get.find<MessageController>();
 
   VoidCallback? onTapChat;
 
@@ -51,7 +57,7 @@ class MessageItemWidget extends StatelessWidget {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Text(
-                          "Dr. Marcus Horizon",
+                          "msg_dr_marcus_horizon".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold16.copyWith(
@@ -66,7 +72,7 @@ class MessageItemWidget extends StatelessWidget {
                             bottom: 1,
                           ),
                           child: Text(
-                            "10.24",
+                            "lbl_10_24".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterRegular12Gray700.copyWith(
@@ -98,7 +104,7 @@ class MessageItemWidget extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "I don,t have any fever, but headchace...",
+                          "msg_i_don_t_have_any".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(

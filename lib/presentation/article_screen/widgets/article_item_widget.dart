@@ -1,9 +1,15 @@
+import '../controller/article_controller.dart';
+import '../models/article_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class ArticleItemWidget extends StatelessWidget {
-  ArticleItemWidget();
+  ArticleItemWidget(this.articleItemModelObj);
+
+  ArticleItemModel articleItemModelObj;
+
+  var controller = Get.find<ArticleController>();
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +50,7 @@ class ArticleItemWidget extends StatelessWidget {
                     189.00,
                   ),
                   child: Text(
-                    "The 25 Healthiest Fruits You Can Eat, According to a Nutritionist",
+                    "msg_the_25_healthiest".tr,
                     maxLines: null,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold12Gray700.copyWith(
@@ -69,7 +75,7 @@ class ArticleItemWidget extends StatelessWidget {
                           top: 1,
                         ),
                         child: Text(
-                          "Jun 10, 2021 ",
+                          "lbl_jun_10_2021".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterMedium9.copyWith(
@@ -106,7 +112,7 @@ class ArticleItemWidget extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "5min read",
+                          "lbl_5min_read".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterMedium9Cyan300.copyWith(

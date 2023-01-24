@@ -1,3 +1,4 @@
+import 'controller/drug_details_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -6,7 +7,7 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_icon_button.dart';
 
-class DrugDetailsScreen extends StatelessWidget {
+class DrugDetailsScreen extends GetWidget<DrugDetailsController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,7 +22,7 @@ class DrugDetailsScreen extends StatelessWidget {
                     svgPath: ImageConstant.imgArrowdown,
                     margin: getMargin(left: 21, top: 16, bottom: 16)),
                 centerTitle: true,
-                title: AppbarSubtitle(text: "Drugs detail"),
+                title: AppbarSubtitle(text: "lbl_drugs_detail".tr),
                 actions: [
                   AppbarImage(
                       height: getSize(24.00),
@@ -54,7 +55,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                         CrossAxisAlignment.start,
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     children: [
-                                      Text("OBH Combi",
+                                      Text("lbl_obh_combi".tr,
                                           overflow: TextOverflow.ellipsis,
                                           textAlign: TextAlign.left,
                                           style: AppStyle.txtInterSemiBold20
@@ -64,7 +65,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                       Padding(
                                           padding:
                                               getPadding(top: 7, right: 10),
-                                          child: Text("75ml",
+                                          child: Text("lbl_75ml".tr,
                                               overflow: TextOverflow.ellipsis,
                                               textAlign: TextAlign.left,
                                               style: AppStyle
@@ -119,7 +120,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                                 Padding(
                                                     padding:
                                                         getPadding(left: 5),
-                                                    child: Text("4.0",
+                                                    child: Text("lbl_4_0".tr,
                                                         overflow: TextOverflow
                                                             .ellipsis,
                                                         textAlign:
@@ -160,7 +161,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                           Padding(
                                               padding: getPadding(
                                                   left: 23, top: 1, bottom: 1),
-                                              child: Text("1",
+                                              child: Text("lbl_1".tr,
                                                   overflow:
                                                       TextOverflow.ellipsis,
                                                   textAlign: TextAlign.left,
@@ -179,7 +180,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                         ])),
                                 Padding(
                                     padding: getPadding(top: 1),
-                                    child: Text("\$9.99",
+                                    child: Text("lbl_9_99".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
                                         style: AppStyle.txtInterSemiBold26
@@ -188,7 +189,7 @@ class DrugDetailsScreen extends StatelessWidget {
                               ])),
                       Padding(
                           padding: getPadding(left: 1, top: 39, right: 10),
-                          child: Text("Description",
+                          child: Text("lbl_description".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterSemiBold16
@@ -201,8 +202,7 @@ class DrugDetailsScreen extends StatelessWidget {
                               child: RichText(
                                   text: TextSpan(children: [
                                     TextSpan(
-                                        text:
-                                            "OBH COMBI  is a cough medicine containing, Paracetamol, Ephedrine HCl, and Chlorphenamine maleate which is used to relieve coughs accompanied by flu symptoms such as fever, headache, and sneezing... ",
+                                        text: "msg_obh_combi_is_a2".tr,
                                         style: TextStyle(
                                             color: ColorConstant.gray500,
                                             fontSize: getFontSize(12),
@@ -210,7 +210,7 @@ class DrugDetailsScreen extends StatelessWidget {
                                             fontWeight: FontWeight.w400,
                                             height: getVerticalSize(1.38))),
                                     TextSpan(
-                                        text: "Read more",
+                                        text: "lbl_read_more".tr,
                                         style: TextStyle(
                                             color: ColorConstant.cyan300,
                                             fontSize: getFontSize(12),
@@ -237,12 +237,12 @@ class DrugDetailsScreen extends StatelessWidget {
                       CustomButton(
                           height: 50,
                           width: 266,
-                          text: "Buy Now",
-                          onTap: () => onTapBuynow(context))
+                          text: "lbl_buy_now".tr,
+                          onTap: onTapBuynow)
                     ]))));
   }
 
-  onTapBuynow(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.cartScreen);
+  onTapBuynow() {
+    Get.toNamed(AppRoutes.cartScreen);
   }
 }

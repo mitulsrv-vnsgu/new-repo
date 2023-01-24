@@ -1,9 +1,15 @@
+import '../controller/pharmacy_controller.dart';
+import '../models/drugs_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class DrugsItemWidget extends StatelessWidget {
-  DrugsItemWidget({this.onTapDrugs});
+  DrugsItemWidget(this.drugsItemModelObj, {this.onTapDrugs});
+
+  DrugsItemModel drugsItemModelObj;
+
+  var controller = Get.find<PharmacyController>();
 
   VoidCallback? onTapDrugs;
 
@@ -49,7 +55,7 @@ class DrugsItemWidget extends StatelessWidget {
                     right: 10,
                   ),
                   child: Text(
-                    "Panadol",
+                    "lbl_panadol".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold12Black900.copyWith(
@@ -66,7 +72,7 @@ class DrugsItemWidget extends StatelessWidget {
                     right: 10,
                   ),
                   child: Text(
-                    "20pcs",
+                    "lbl_20pcs".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterMedium9.copyWith(
@@ -95,7 +101,7 @@ class DrugsItemWidget extends StatelessWidget {
                             top: 1,
                           ),
                           child: Text(
-                            "\$15.99",
+                            "lbl_15_99".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14Black900.copyWith(

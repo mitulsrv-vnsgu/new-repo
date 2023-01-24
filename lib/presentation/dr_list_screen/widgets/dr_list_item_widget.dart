@@ -1,9 +1,15 @@
+import '../controller/dr_list_controller.dart';
+import '../models/dr_list_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class DrListItemWidget extends StatelessWidget {
-  DrListItemWidget({this.onTapRowthumbnailone});
+  DrListItemWidget(this.drListItemModelObj, {this.onTapRowthumbnailone});
+
+  DrListItemModel drListItemModelObj;
+
+  var controller = Get.find<DrListController>();
 
   VoidCallback? onTapRowthumbnailone;
 
@@ -47,7 +53,7 @@ class DrListItemWidget extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
-                    "Dr. Marcus Horizon",
+                    "msg_dr_marcus_horizon".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold18.copyWith(
@@ -62,7 +68,7 @@ class DrListItemWidget extends StatelessWidget {
                       right: 10,
                     ),
                     child: Text(
-                      "Chardiologist",
+                      "lbl_chardiologist".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterMedium12.copyWith(
@@ -101,7 +107,7 @@ class DrListItemWidget extends StatelessWidget {
                             top: 1,
                           ),
                           child: Text(
-                            "4,7",
+                            "lbl_4_7".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterMedium12Cyan300.copyWith(
@@ -142,7 +148,7 @@ class DrListItemWidget extends StatelessWidget {
                             top: 1,
                           ),
                           child: Text(
-                            "800m away",
+                            "lbl_800m_away".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterMedium12.copyWith(

@@ -1,9 +1,15 @@
+import '../controller/dr_details_controller.dart';
+import '../models/listtime_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 // ignore: must_be_immutable
 class ListtimeItemWidget extends StatelessWidget {
-  ListtimeItemWidget();
+  ListtimeItemWidget(this.listtimeItemModelObj);
+
+  ListtimeItemModel listtimeItemModelObj;
+
+  var controller = Get.find<DrDetailsController>();
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +28,7 @@ class ListtimeItemWidget extends StatelessWidget {
             borderRadius: BorderRadiusStyle.txtRoundedBorder10,
           ),
           child: Text(
-            "09:00 AM",
+            "lbl_09_00_am".tr,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterRegular12Teal50.copyWith(
@@ -46,7 +52,7 @@ class ListtimeItemWidget extends StatelessWidget {
             borderRadius: BorderRadiusStyle.txtRoundedBorder10,
           ),
           child: Text(
-            "10:00 AM",
+            "lbl_10_00_am".tr,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterRegular12Gray700.copyWith(
@@ -70,7 +76,7 @@ class ListtimeItemWidget extends StatelessWidget {
             borderRadius: BorderRadiusStyle.txtRoundedBorder10,
           ),
           child: Text(
-            "11:00 AM",
+            "lbl_11_00_am".tr,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.left,
             style: AppStyle.txtInterRegular12Teal50.copyWith(

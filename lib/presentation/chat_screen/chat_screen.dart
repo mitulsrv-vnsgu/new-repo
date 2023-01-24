@@ -1,3 +1,4 @@
+import 'controller/chat_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -6,15 +7,13 @@ import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class ChatScreen extends StatelessWidget {
-  TextEditingController chatboxController = TextEditingController();
-
+class ChatScreen extends GetWidget<ChatController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: ColorConstant.whiteA700,
         resizeToAvoidBottomInset: false,
+        backgroundColor: ColorConstant.whiteA700,
         appBar: CustomAppBar(
           height: getVerticalSize(
             56.00,
@@ -38,7 +37,7 @@ class ChatScreen extends StatelessWidget {
           title: Row(
             children: [
               AppbarSubtitle(
-                text: "Dr. Marcus Horizon",
+                text: "msg_dr_marcus_horizon".tr,
                 margin: getMargin(
                   left: 18,
                   top: 16,
@@ -116,7 +115,7 @@ class ChatScreen extends StatelessWidget {
                         right: 42,
                       ),
                       child: Text(
-                        "Consultion Start",
+                        "msg_consultion_start".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16Cyan300.copyWith(
@@ -134,7 +133,7 @@ class ChatScreen extends StatelessWidget {
                         bottom: 16,
                       ),
                       child: Text(
-                        "You can consult your problem to the doctor",
+                        "msg_you_can_consult".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterMedium12.copyWith(
@@ -177,7 +176,7 @@ class ChatScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Dr. Marcus Horizon",
+                            "msg_dr_marcus_horizon".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -192,7 +191,7 @@ class ChatScreen extends StatelessWidget {
                               right: 10,
                             ),
                             child: Text(
-                              "10 min ago",
+                              "lbl_10_min_ago".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -211,7 +210,7 @@ class ChatScreen extends StatelessWidget {
               CustomButton(
                 height: 36,
                 width: 205,
-                text: "Hello, How can i help you?",
+                text: "msg_hello_how_can_i".tr,
                 margin: getMargin(
                   top: 10,
                   right: 10,
@@ -247,7 +246,7 @@ class ChatScreen extends StatelessWidget {
                           bottom: 13,
                         ),
                         child: Text(
-                          "I have suffering from headache \nand cold for 3 days, I took 2 \ntablets of dolo, but still pain",
+                          "msg_i_have_suffering".tr,
                           maxLines: null,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14WhiteA700.copyWith(
@@ -291,7 +290,7 @@ class ChatScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Dr. Marcus Horizon",
+                            "msg_dr_marcus_horizon".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -306,7 +305,7 @@ class ChatScreen extends StatelessWidget {
                               right: 10,
                             ),
                             child: Text(
-                              "5 min ago",
+                              "lbl_5_min_ago".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -345,7 +344,7 @@ class ChatScreen extends StatelessWidget {
                         all: 13,
                       ),
                       child: Text(
-                        "Ok, Do you have fever? is the\nheadchace severe",
+                        "msg_ok_do_you_have".tr,
                         maxLines: null,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -386,7 +385,7 @@ class ChatScreen extends StatelessWidget {
                             bottom: 11,
                           ),
                           child: Text(
-                            "I don,t have any fever, \nbut headchace is painful",
+                            "msg_i_don_t_have_any2".tr,
                             maxLines: null,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterRegular14WhiteA700.copyWith(
@@ -431,7 +430,7 @@ class ChatScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            "Dr. Marcus Horizon",
+                            "msg_dr_marcus_horizon".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
                             style: AppStyle.txtInterSemiBold14.copyWith(
@@ -446,7 +445,7 @@ class ChatScreen extends StatelessWidget {
                               right: 10,
                             ),
                             child: Text(
-                              "Online",
+                              "lbl_online".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium10.copyWith(
@@ -471,23 +470,7 @@ class ChatScreen extends StatelessWidget {
                 ),
                 color: ColorConstant.bluegray50,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(
-                      getHorizontalSize(
-                        5.00,
-                      ),
-                    ),
-                    bottomLeft: Radius.circular(
-                      getHorizontalSize(
-                        5.00,
-                      ),
-                    ),
-                    bottomRight: Radius.circular(
-                      getHorizontalSize(
-                        5.00,
-                      ),
-                    ),
-                  ),
+                  borderRadius: BorderRadiusStyle.customBorderBL5,
                 ),
                 child: Container(
                   height: getVerticalSize(
@@ -539,8 +522,8 @@ class ChatScreen extends StatelessWidget {
               CustomTextFormField(
                 width: 206,
                 focusNode: FocusNode(),
-                controller: chatboxController,
-                hintText: "Type message ...",
+                controller: controller.chatboxController,
+                hintText: "msg_type_message".tr,
                 margin: getMargin(
                   bottom: 1,
                 ),
@@ -566,7 +549,7 @@ class ChatScreen extends StatelessWidget {
               CustomButton(
                 height: 50,
                 width: 111,
-                text: "Send",
+                text: "lbl_send".tr,
               ),
             ],
           ),

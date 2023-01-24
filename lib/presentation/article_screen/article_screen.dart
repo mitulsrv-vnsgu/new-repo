@@ -1,4 +1,6 @@
 import '../article_screen/widgets/article_item_widget.dart';
+import 'controller/article_controller.dart';
+import 'models/article_item_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -6,15 +8,13 @@ import 'package:mitul_s_application38/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_text_form_field.dart';
 
-class ArticleScreen extends StatelessWidget {
-  TextEditingController searchController = TextEditingController();
-
+class ArticleScreen extends GetWidget<ArticleController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: ColorConstant.whiteA700,
         resizeToAvoidBottomInset: false,
+        backgroundColor: ColorConstant.whiteA700,
         appBar: CustomAppBar(
           height: getVerticalSize(
             56.00,
@@ -36,7 +36,7 @@ class ArticleScreen extends StatelessWidget {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "Articles",
+            text: "lbl_articles".tr,
           ),
           actions: [
             AppbarImage(
@@ -62,8 +62,8 @@ class ArticleScreen extends StatelessWidget {
               CustomTextFormField(
                 width: 335,
                 focusNode: FocusNode(),
-                controller: searchController,
-                hintText: "Search articles, news...",
+                controller: controller.searchController,
+                hintText: "msg_search_articles".tr,
                 margin: getMargin(
                   left: 20,
                   top: 23,
@@ -100,7 +100,7 @@ class ArticleScreen extends StatelessWidget {
                     right: 20,
                   ),
                   child: Text(
-                    "Popular Articles",
+                    "msg_popular_articles".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
                     style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -133,7 +133,7 @@ class ArticleScreen extends StatelessWidget {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "Covid-19",
+                        "lbl_covid_19".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -157,7 +157,7 @@ class ArticleScreen extends StatelessWidget {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "Diet",
+                        "lbl_diet".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -181,7 +181,7 @@ class ArticleScreen extends StatelessWidget {
                         borderRadius: BorderRadiusStyle.txtRoundedBorder10,
                       ),
                       child: Text(
-                        "Fitness",
+                        "lbl_fitness".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14WhiteA700.copyWith(
@@ -206,7 +206,7 @@ class ArticleScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "Trending Articles",
+                      "msg_trending_articles".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -221,7 +221,7 @@ class ArticleScreen extends StatelessWidget {
                         bottom: 3,
                       ),
                       child: Text(
-                        "See all",
+                        "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular12Cyan300.copyWith(
@@ -265,11 +265,7 @@ class ArticleScreen extends StatelessWidget {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  getHorizontalSize(
-                                    8.00,
-                                  ),
-                                ),
+                                borderRadius: BorderRadiusStyle.circleBorder8,
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -311,7 +307,7 @@ class ArticleScreen extends StatelessWidget {
                               right: 13,
                             ),
                             child: Text(
-                              "Covid-19",
+                              "lbl_covid_19".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium9Cyan300.copyWith(
@@ -331,7 +327,7 @@ class ArticleScreen extends StatelessWidget {
                               right: 10,
                             ),
                             child: Text(
-                              "Comparing the \nAstraZeneca and \nSinovac COVID-19 \nVaccines",
+                              "msg_comparing_the_astrazeneca".tr,
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style:
@@ -359,7 +355,7 @@ class ArticleScreen extends StatelessWidget {
                                     top: 1,
                                   ),
                                   child: Text(
-                                    "Jun 12, 2021",
+                                    "lbl_jun_12_2021".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9.copyWith(
@@ -396,7 +392,7 @@ class ArticleScreen extends StatelessWidget {
                                     bottom: 1,
                                   ),
                                   child: Text(
-                                    "6 min read",
+                                    "lbl_6_min_read".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9Cyan300
@@ -436,11 +432,7 @@ class ArticleScreen extends StatelessWidget {
                               ),
                               color: ColorConstant.gray400,
                               shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(
-                                  getHorizontalSize(
-                                    8.00,
-                                  ),
-                                ),
+                                borderRadius: BorderRadiusStyle.circleBorder8,
                               ),
                               child: Container(
                                 height: getVerticalSize(
@@ -482,7 +474,7 @@ class ArticleScreen extends StatelessWidget {
                               right: 13,
                             ),
                             child: Text(
-                              "Covid-19",
+                              "lbl_covid_19".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterMedium9Cyan300.copyWith(
@@ -502,7 +494,7 @@ class ArticleScreen extends StatelessWidget {
                               right: 10,
                             ),
                             child: Text(
-                              "The Horror Of The \nSecond Wave Of \nCOVID-19 \npandemic",
+                              "msg_the_horror_of_the".tr,
                               maxLines: null,
                               textAlign: TextAlign.left,
                               style:
@@ -530,7 +522,7 @@ class ArticleScreen extends StatelessWidget {
                                     top: 1,
                                   ),
                                   child: Text(
-                                    "Jun 10, 2021",
+                                    "lbl_jun_10_20212".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9.copyWith(
@@ -567,7 +559,7 @@ class ArticleScreen extends StatelessWidget {
                                     bottom: 1,
                                   ),
                                   child: Text(
-                                    "5 min read",
+                                    "lbl_5_min_read2".tr,
                                     overflow: TextOverflow.ellipsis,
                                     textAlign: TextAlign.left,
                                     style: AppStyle.txtInterMedium9Cyan300
@@ -599,7 +591,7 @@ class ArticleScreen extends StatelessWidget {
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Text(
-                      "Related Articles",
+                      "msg_related_articles".tr,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.left,
                       style: AppStyle.txtInterSemiBold16Black900.copyWith(
@@ -614,7 +606,7 @@ class ArticleScreen extends StatelessWidget {
                         bottom: 1,
                       ),
                       child: Text(
-                        "See all",
+                        "lbl_see_all".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular12Cyan300.copyWith(
@@ -634,20 +626,27 @@ class ArticleScreen extends StatelessWidget {
                   right: 20,
                   bottom: 58,
                 ),
-                child: ListView.separated(
-                  physics: BouncingScrollPhysics(),
-                  shrinkWrap: true,
-                  separatorBuilder: (context, index) {
-                    return SizedBox(
-                      height: getVerticalSize(
-                        10.00,
-                      ),
-                    );
-                  },
-                  itemCount: 2,
-                  itemBuilder: (context, index) {
-                    return ArticleItemWidget();
-                  },
+                child: Obx(
+                  () => ListView.separated(
+                    physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return SizedBox(
+                        height: getVerticalSize(
+                          10.00,
+                        ),
+                      );
+                    },
+                    itemCount:
+                        controller.articleModelObj.value.articleItemList.length,
+                    itemBuilder: (context, index) {
+                      ArticleItemModel model = controller
+                          .articleModelObj.value.articleItemList[index];
+                      return ArticleItemWidget(
+                        model,
+                      );
+                    },
+                  ),
                 ),
               ),
             ],

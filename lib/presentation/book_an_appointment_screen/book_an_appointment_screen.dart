@@ -1,3 +1,4 @@
+import 'controller/book_an_appointment_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -5,7 +6,7 @@ import 'package:mitul_s_application38/widgets/app_bar/appbar_subtitle.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 
-class BookAnAppointmentScreen extends StatelessWidget {
+class BookAnAppointmentScreen extends GetWidget<BookAnAppointmentController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -32,7 +33,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
           ),
           centerTitle: true,
           title: AppbarSubtitle(
-            text: "Apointment",
+            text: "lbl_apointment".tr,
           ),
         ),
         body: Padding(
@@ -84,7 +85,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              "Dr. Marcus Horizon",
+                              "msg_dr_marcus_horizon".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
                               style: AppStyle.txtInterSemiBold18.copyWith(
@@ -99,7 +100,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                                 right: 10,
                               ),
                               child: Text(
-                                "Chardiologist",
+                                "lbl_chardiologist".tr,
                                 overflow: TextOverflow.ellipsis,
                                 textAlign: TextAlign.left,
                                 style: AppStyle.txtInterMedium12.copyWith(
@@ -138,7 +139,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                                       top: 1,
                                     ),
                                     child: Text(
-                                      "4,7",
+                                      "lbl_4_7".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtInterMedium12Cyan300
@@ -180,7 +181,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                                       top: 1,
                                     ),
                                     child: Text(
-                                      "800m away",
+                                      "lbl_800m_away".tr,
                                       overflow: TextOverflow.ellipsis,
                                       textAlign: TextAlign.left,
                                       style: AppStyle.txtInterMedium12.copyWith(
@@ -213,7 +214,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        "Date",
+                        "lbl_date".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16.copyWith(
@@ -228,7 +229,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "Change",
+                          "lbl_change".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -269,7 +270,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                         bottom: 9,
                       ),
                       child: Text(
-                        "Wednesday, Jun 23, 2021 | 10:00 AM",
+                        "msg_wednesday_jun_23".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -313,7 +314,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Text(
-                        "Reason",
+                        "lbl_reason".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold16.copyWith(
@@ -328,7 +329,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "Change",
+                          "lbl_change".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -359,11 +360,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                       margin: EdgeInsets.all(0),
                       color: ColorConstant.bluegray50,
                       shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(
-                          getHorizontalSize(
-                            18.00,
-                          ),
-                        ),
+                        borderRadius: BorderRadiusStyle.circleBorder18,
                       ),
                       child: Container(
                         height: getSize(
@@ -401,7 +398,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                         bottom: 7,
                       ),
                       child: Text(
-                        "Chest pain",
+                        "lbl_chest_pain".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold14.copyWith(
@@ -439,7 +436,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                   right: 10,
                 ),
                 child: Text(
-                  "Payment Detail",
+                  "lbl_payment_detail".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -466,7 +463,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "Consultation",
+                          "lbl_consultation".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -481,7 +478,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           top: 1,
                         ),
                         child: Text(
-                          "\$60.00",
+                          "lbl_60_00".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -512,7 +509,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "Admin Fee",
+                          "lbl_admin_fee".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -527,7 +524,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           top: 1,
                         ),
                         child: Text(
-                          "\$01.00",
+                          "lbl_01_00".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -558,7 +555,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "Aditional Discount",
+                          "msg_aditional_discount".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -573,7 +570,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           top: 1,
                         ),
                         child: Text(
-                          "-",
+                          "lbl2".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular14.copyWith(
@@ -604,7 +601,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           top: 1,
                         ),
                         child: Text(
-                          "Total",
+                          "lbl_total".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold14.copyWith(
@@ -619,7 +616,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 1,
                         ),
                         child: Text(
-                          "\$61.00",
+                          "lbl_61_00".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterSemiBold14.copyWith(
@@ -658,7 +655,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                   right: 10,
                 ),
                 child: Text(
-                  "Payment Method",
+                  "lbl_payment_method".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
                   style: AppStyle.txtInterSemiBold16.copyWith(
@@ -690,7 +687,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 14,
                         ),
                         child: Text(
-                          "VISA",
+                          "lbl_visa".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterBlackItalic16.copyWith(
@@ -707,7 +704,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                           bottom: 15,
                         ),
                         child: Text(
-                          "Change",
+                          "lbl_change".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
                           style: AppStyle.txtInterRegular12.copyWith(
@@ -750,7 +747,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                         right: 10,
                       ),
                       child: Text(
-                        "Total",
+                        "lbl_total".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterMedium14.copyWith(
@@ -765,7 +762,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
                         top: 1,
                       ),
                       child: Text(
-                        "\$ 61.00",
+                        "lbl_61_002".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterSemiBold18.copyWith(
@@ -781,7 +778,7 @@ class BookAnAppointmentScreen extends StatelessWidget {
               CustomButton(
                 height: 50,
                 width: 192,
-                text: "Booking",
+                text: "lbl_booking".tr,
               ),
             ],
           ),

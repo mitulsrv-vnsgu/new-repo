@@ -1,7 +1,8 @@
+import 'controller/app_navigation_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
-class AppNavigationScreen extends StatelessWidget {
+class AppNavigationScreen extends GetWidget<AppNavigationController> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -26,7 +27,7 @@ class AppNavigationScreen extends StatelessWidget {
                                             top: 10,
                                             right: 20,
                                             bottom: 10),
-                                        child: Text("App Navigation",
+                                        child: Text("lbl_app_navigation".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.center,
                                             style: AppStyle.txtRobotoRegular20
@@ -37,8 +38,7 @@ class AppNavigationScreen extends StatelessWidget {
                                     alignment: Alignment.centerLeft,
                                     child: Padding(
                                         padding: getPadding(left: 20),
-                                        child: Text(
-                                            "Check your app's UI from the below demo screens of your app.",
+                                        child: Text("msg_check_your_app_s".tr,
                                             overflow: TextOverflow.ellipsis,
                                             textAlign: TextAlign.center,
                                             style: AppStyle.txtRobotoRegular16
@@ -63,7 +63,7 @@ class AppNavigationScreen extends StatelessWidget {
                                       children: [
                                         GestureDetector(
                                             onTap: () {
-                                              onTapDrList(context);
+                                              onTapDrList();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -85,7 +85,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Dr List",
+                                                                  "lbl_dr_list"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -110,7 +111,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapDrDetails(context);
+                                              onTapDrDetails();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -132,7 +133,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Dr Details",
+                                                                  "lbl_dr_details"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -157,7 +159,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapBookanappointment(context);
+                                              onTapBookanappointment();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -179,7 +181,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Book an appointment",
+                                                                  "msg_book_an_appointment"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -204,7 +207,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapChat(context);
+                                              onTapChat();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -226,7 +229,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Chat",
+                                                                  "lbl_chat".tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -251,7 +254,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapPharmacy(context);
+                                              onTapPharmacy();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -273,7 +276,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Pharmacy",
+                                                                  "lbl_pharmacy"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -298,7 +302,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapDrugDetails(context);
+                                              onTapDrugDetails();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -320,7 +324,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Drug Details",
+                                                                  "lbl_drug_details"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -345,7 +350,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapArticle(context);
+                                              onTapArticle();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -367,7 +372,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Article",
+                                                                  "lbl_article"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -392,7 +398,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapCart(context);
+                                              onTapCart();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -414,7 +420,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "Cart",
+                                                                  "lbl_cart".tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -439,7 +445,7 @@ class AppNavigationScreen extends StatelessWidget {
                                                     ]))),
                                         GestureDetector(
                                             onTap: () {
-                                              onTapAmbulance(context);
+                                              onTapAmbulance();
                                             },
                                             child: Container(
                                                 width: size.width,
@@ -461,7 +467,8 @@ class AppNavigationScreen extends StatelessWidget {
                                                                       bottom:
                                                                           10),
                                                               child: Text(
-                                                                  "ambulance",
+                                                                  "lbl_ambulance2"
+                                                                      .tr,
                                                                   overflow:
                                                                       TextOverflow
                                                                           .ellipsis,
@@ -488,39 +495,39 @@ class AppNavigationScreen extends StatelessWidget {
                     ]))));
   }
 
-  onTapDrList(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.drListScreen);
+  onTapDrList() {
+    Get.toNamed(AppRoutes.drListScreen);
   }
 
-  onTapDrDetails(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.drDetailsScreen);
+  onTapDrDetails() {
+    Get.toNamed(AppRoutes.drDetailsScreen);
   }
 
-  onTapBookanappointment(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.bookAnAppointmentScreen);
+  onTapBookanappointment() {
+    Get.toNamed(AppRoutes.bookAnAppointmentScreen);
   }
 
-  onTapChat(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.chatScreen);
+  onTapChat() {
+    Get.toNamed(AppRoutes.chatScreen);
   }
 
-  onTapPharmacy(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.pharmacyScreen);
+  onTapPharmacy() {
+    Get.toNamed(AppRoutes.pharmacyScreen);
   }
 
-  onTapDrugDetails(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.drugDetailsScreen);
+  onTapDrugDetails() {
+    Get.toNamed(AppRoutes.drugDetailsScreen);
   }
 
-  onTapArticle(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.articleScreen);
+  onTapArticle() {
+    Get.toNamed(AppRoutes.articleScreen);
   }
 
-  onTapCart(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.cartScreen);
+  onTapCart() {
+    Get.toNamed(AppRoutes.cartScreen);
   }
 
-  onTapAmbulance(BuildContext context) {
-    Navigator.pushNamed(context, AppRoutes.ambulanceScreen);
+  onTapAmbulance() {
+    Get.toNamed(AppRoutes.ambulanceScreen);
   }
 }

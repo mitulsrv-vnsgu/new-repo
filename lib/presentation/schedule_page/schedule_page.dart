@@ -1,4 +1,7 @@
 import '../schedule_page/widgets/schedule_item_widget.dart';
+import 'controller/schedule_controller.dart';
+import 'models/schedule_item_model.dart';
+import 'models/schedule_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
@@ -8,6 +11,9 @@ import 'package:mitul_s_application38/widgets/custom_button.dart';
 
 // ignore_for_file: must_be_immutable
 class SchedulePage extends StatelessWidget {
+  ScheduleController controller =
+      Get.put(ScheduleController(ScheduleModel().obs));
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +24,7 @@ class SchedulePage extends StatelessWidget {
             56.00,
           ),
           title: AppbarTitle(
-            text: "Schedule",
+            text: "lbl_schedule".tr,
             margin: getMargin(
               left: 21,
             ),
@@ -92,7 +98,7 @@ class SchedulePage extends StatelessWidget {
                     CustomButton(
                       height: 46,
                       width: 104,
-                      text: "Upcoming",
+                      text: "lbl_upcoming".tr,
                     ),
                     Padding(
                       padding: getPadding(
@@ -100,7 +106,7 @@ class SchedulePage extends StatelessWidget {
                         bottom: 13,
                       ),
                       child: Text(
-                        "Completed",
+                        "lbl_completed".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -117,7 +123,7 @@ class SchedulePage extends StatelessWidget {
                         bottom: 14,
                       ),
                       child: Text(
-                        "Canceled",
+                        "lbl_canceled".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
                         style: AppStyle.txtInterRegular14.copyWith(
@@ -134,20 +140,27 @@ class SchedulePage extends StatelessWidget {
                 padding: getPadding(
                   top: 30,
                 ),
-                child: ListView.separated(
-                  physics: BouncingScrollPhysics(),
-                  shrinkWrap: true,
-                  separatorBuilder: (context, index) {
-                    return SizedBox(
-                      height: getVerticalSize(
-                        20.00,
-                      ),
-                    );
-                  },
-                  itemCount: 2,
-                  itemBuilder: (context, index) {
-                    return ScheduleItemWidget();
-                  },
+                child: Obx(
+                  () => ListView.separated(
+                    physics: BouncingScrollPhysics(),
+                    shrinkWrap: true,
+                    separatorBuilder: (context, index) {
+                      return SizedBox(
+                        height: getVerticalSize(
+                          20.00,
+                        ),
+                      );
+                    },
+                    itemCount: controller
+                        .scheduleModelObj.value.scheduleItemList.length,
+                    itemBuilder: (context, index) {
+                      ScheduleItemModel model = controller
+                          .scheduleModelObj.value.scheduleItemList[index];
+                      return ScheduleItemWidget(
+                        model,
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
