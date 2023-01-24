@@ -21,7 +21,7 @@ class Drugs1ItemWidget extends StatelessWidget {
             right: 17.169998,
           ),
           decoration: AppDecoration.outlineBluegray50.copyWith(
-            borderRadius: BorderRadiusStyle.roundedBorder10,
+            borderRadius: BorderRadiusStyle.roundedBorder11,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -52,7 +52,7 @@ class Drugs1ItemWidget extends StatelessWidget {
                   "lbl_obh_combi".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterSemiBold12Black900.copyWith(
+                  style: AppStyle.txtInterSemiBold12.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),
@@ -69,7 +69,7 @@ class Drugs1ItemWidget extends StatelessWidget {
                   "lbl_75ml".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterMedium9Gray500.copyWith(
+                  style: AppStyle.txtInterMedium9.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),

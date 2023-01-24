@@ -19,20 +19,15 @@ class AppbarTitle extends StatelessWidget {
       },
       child: Padding(
         padding: margin ?? EdgeInsets.zero,
-        child: Container(
-          width: getHorizontalSize(
-            186.00,
-          ),
-          child: Text(
-            text,
-            maxLines: null,
-            textAlign: TextAlign.left,
-            style: AppStyle.txtInterSemiBold24.copyWith(
-              height: getVerticalSize(
-                1.10,
-              ),
-              color: ColorConstant.gray700,
+        child: Text(
+          text,
+          overflow: TextOverflow.ellipsis,
+          textAlign: TextAlign.left,
+          style: AppStyle.txtInterSemiBold24.copyWith(
+            height: getVerticalSize(
+              1.10,
             ),
+            color: ColorConstant.gray700,
           ),
         ),
       ),

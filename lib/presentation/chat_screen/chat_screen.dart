@@ -102,7 +102,7 @@ class ChatScreen extends GetWidget<ChatController> {
               Container(
                 width: double.infinity,
                 decoration: AppDecoration.outlineBluegray50.copyWith(
-                  borderRadius: BorderRadiusStyle.roundedBorder10,
+                  borderRadius: BorderRadiusStyle.roundedBorder11,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -249,7 +249,7 @@ class ChatScreen extends GetWidget<ChatController> {
                           "msg_i_have_suffering".tr,
                           maxLines: null,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterRegular14WhiteA700.copyWith(
+                          style: AppStyle.txtInterRegular14.copyWith(
                             height: getVerticalSize(
                               1.18,
                             ),
@@ -347,7 +347,7 @@ class ChatScreen extends GetWidget<ChatController> {
                         "msg_ok_do_you_have".tr,
                         maxLines: null,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14.copyWith(
+                        style: AppStyle.txtInterRegular14Gray700.copyWith(
                           height: getVerticalSize(
                             1.18,
                           ),
@@ -388,7 +388,7 @@ class ChatScreen extends GetWidget<ChatController> {
                             "msg_i_don_t_have_any2".tr,
                             maxLines: null,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtInterRegular14WhiteA700.copyWith(
+                            style: AppStyle.txtInterRegular14.copyWith(
                               height: getVerticalSize(
                                 1.18,
                               ),

@@ -51,7 +51,7 @@ class MessagePage extends StatelessWidget {
                       Container(
                           margin: getMargin(right: 1),
                           decoration: AppDecoration.fillBluegray50.copyWith(
-                              borderRadius: BorderRadiusStyle.roundedBorder10),
+                              borderRadius: BorderRadiusStyle.circleBorder8),
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               crossAxisAlignment: CrossAxisAlignment.center,
@@ -64,7 +64,7 @@ class MessagePage extends StatelessWidget {
                                     child: Text("lbl_group".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular14
+                                        style: AppStyle.txtInterRegular14Gray700
                                             .copyWith(
                                                 height:
                                                     getVerticalSize(1.89)))),
@@ -74,7 +74,7 @@ class MessagePage extends StatelessWidget {
                                     child: Text("lbl_private".tr,
                                         overflow: TextOverflow.ellipsis,
                                         textAlign: TextAlign.left,
-                                        style: AppStyle.txtInterRegular14
+                                        style: AppStyle.txtInterRegular14Gray700
                                             .copyWith(
                                                 height: getVerticalSize(1.89))))
                               ])),
