@@ -62,7 +62,7 @@ class SettignsItemWidget extends StatelessWidget {
                   "lbl_215bpm".tr,
                   overflow: TextOverflow.ellipsis,
                   textAlign: TextAlign.left,
-                  style: AppStyle.txtInterSemiBold16WhiteA700.copyWith(
+                  style: AppStyle.txtInterSemiBold16.copyWith(
                     height: getVerticalSize(
                       1.00,
                     ),

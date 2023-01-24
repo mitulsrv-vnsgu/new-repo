@@ -5,7 +5,6 @@ import 'models/schedule_model.dart';
 import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 import 'package:mitul_s_application38/widgets/app_bar/appbar_image.dart';
-import 'package:mitul_s_application38/widgets/app_bar/appbar_title.dart';
 import 'package:mitul_s_application38/widgets/app_bar/custom_app_bar.dart';
 import 'package:mitul_s_application38/widgets/custom_button.dart';
 
@@ -23,10 +22,19 @@ class SchedulePage extends StatelessWidget {
           height: getVerticalSize(
             56.00,
           ),
-          title: AppbarTitle(
-            text: "lbl_schedule".tr,
-            margin: getMargin(
+          title: Padding(
+            padding: getPadding(
               left: 21,
+            ),
+            child: Text(
+              "lbl_schedule".tr,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.left,
+              style: AppStyle.txtInterSemiBold24.copyWith(
+                height: getVerticalSize(
+                  1.10,
+                ),
+              ),
             ),
           ),
           actions: [
@@ -109,7 +117,7 @@ class SchedulePage extends StatelessWidget {
                         "lbl_completed".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.89,
                           ),
@@ -126,7 +134,7 @@ class SchedulePage extends StatelessWidget {
                         "lbl_canceled".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterRegular14Gray700.copyWith(
+                        style: AppStyle.txtInterRegular14.copyWith(
                           height: getVerticalSize(
                             1.89,
                           ),
