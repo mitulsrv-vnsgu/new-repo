@@ -98,7 +98,7 @@ class SettignsPage extends StatelessWidget {
                                     color: ColorConstant.whiteA700,
                                     shape: RoundedRectangleBorder(
                                       borderRadius:
-                                          BorderRadiusStyle.roundedBorder10,
+                                          BorderRadiusStyle.circleBorder8,
                                     ),
                                     child: Container(
                                       height: getSize(
@@ -110,7 +110,7 @@ class SettignsPage extends StatelessWidget {
                                       decoration:
                                           AppDecoration.fillWhiteA700.copyWith(
                                         borderRadius:
-                                            BorderRadiusStyle.roundedBorder10,
+                                            BorderRadiusStyle.circleBorder8,
                                       ),
                                       child: Stack(
                                         children: [
@@ -145,8 +145,7 @@ class SettignsPage extends StatelessWidget {
                               "lbl_amelia_renata".tr,
                               overflow: TextOverflow.ellipsis,
                               textAlign: TextAlign.left,
-                              style:
-                                  AppStyle.txtInterSemiBold18WhiteA700.copyWith(
+                              style: AppStyle.txtInterSemiBold18.copyWith(
                                 height: getVerticalSize(
                                   1.00,
                                 ),

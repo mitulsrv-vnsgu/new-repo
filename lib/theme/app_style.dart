@@ -2,33 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 class AppStyle {
-  static TextStyle txtPoppinsBold16 = TextStyle(
-    color: ColorConstant.indigo900,
-    fontSize: getFontSize(
-      16,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w700,
-  );
-
-  static TextStyle txtInterMedium8Bluegray100 = TextStyle(
-    color: ColorConstant.bluegray100,
-    fontSize: getFontSize(
-      8,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtInterSemiBold18WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      18,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
   static TextStyle txtInterSemiBold26 = TextStyle(
     color: ColorConstant.gray700,
     fontSize: getFontSize(
@@ -45,24 +18,6 @@ class AppStyle {
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtPoppinsBold12 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w700,
-  );
-
-  static TextStyle txtInterMedium9Cyan300 = TextStyle(
-    color: ColorConstant.cyan300,
-    fontSize: getFontSize(
-      9,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
   );
 
   static TextStyle txtInterSemiBold16WhiteA700 = TextStyle(
@@ -92,58 +47,13 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle txtPoppinsRegular12 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Poppins',
-    fontWeight: FontWeight.w400,
-  );
-
   static TextStyle txtInterSemiBold10 = TextStyle(
-    color: ColorConstant.gray700,
+    color: ColorConstant.cyan100,
     fontSize: getFontSize(
       10,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterRegular14WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      14,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtInterMedium12Cyan300 = TextStyle(
-    color: ColorConstant.cyan300,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtInterMedium8Gray500 = TextStyle(
-    color: ColorConstant.gray500,
-    fontSize: getFontSize(
-      8,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
-  static TextStyle txtInterMedium9Gray500 = TextStyle(
-    color: ColorConstant.gray500,
-    fontSize: getFontSize(
-      9,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
   );
 
   static TextStyle txtRobotoRegular20 = TextStyle(
@@ -162,24 +72,6 @@ class AppStyle {
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterRegular10WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      10,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
-  );
-
-  static TextStyle txtInterRegular10 = TextStyle(
-    color: ColorConstant.gray500,
-    fontSize: getFontSize(
-      10,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
   );
 
   static TextStyle txtInterMedium12 = TextStyle(
@@ -209,15 +101,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterSemiBold12 = TextStyle(
-    color: ColorConstant.gray700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
   static TextStyle txtInterMedium10 = TextStyle(
     color: ColorConstant.gray500,
     fontSize: getFontSize(
@@ -227,17 +110,17 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle txtInterSemiBold14WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
+  static TextStyle txtInterSemiBold12 = TextStyle(
+    color: ColorConstant.black900,
     fontSize: getFontSize(
-      14,
+      12,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
   );
 
   static TextStyle txtInterSemiBold18 = TextStyle(
-    color: ColorConstant.gray700,
+    color: ColorConstant.whiteA700,
     fontSize: getFontSize(
       18,
     ),
@@ -254,15 +137,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterRegular12Teal50 = TextStyle(
-    color: ColorConstant.teal50,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w400,
-  );
-
   static TextStyle txtInterMedium14 = TextStyle(
     color: ColorConstant.gray500,
     fontSize: getFontSize(
@@ -272,13 +146,13 @@ class AppStyle {
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle txtInterMedium8 = TextStyle(
-    color: ColorConstant.cyan300,
+  static TextStyle txtInterSemiBold18Gray700 = TextStyle(
+    color: ColorConstant.gray700,
     fontSize: getFontSize(
-      8,
+      18,
     ),
     fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
   );
 
   static TextStyle txtInterBlackItalic16 = TextStyle(
@@ -288,15 +162,6 @@ class AppStyle {
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w900,
-  );
-
-  static TextStyle txtInterSemiBold12Black900 = TextStyle(
-    color: ColorConstant.black900,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
   );
 
   static TextStyle txtRobotoRegular16 = TextStyle(
@@ -335,25 +200,16 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterRegular12Gray700 = TextStyle(
-    color: ColorConstant.gray700,
+  static TextStyle txtInterRegular14 = TextStyle(
+    color: ColorConstant.whiteA700,
     fontSize: getFontSize(
-      12,
+      14,
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterSemiBold12WhiteA700 = TextStyle(
-    color: ColorConstant.whiteA700,
-    fontSize: getFontSize(
-      12,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
-  );
-
-  static TextStyle txtInterRegular14 = TextStyle(
+  static TextStyle txtInterRegular14Gray700 = TextStyle(
     color: ColorConstant.gray700,
     fontSize: getFontSize(
       14,
@@ -362,13 +218,13 @@ class AppStyle {
     fontWeight: FontWeight.w400,
   );
 
-  static TextStyle txtInterSemiBold10Cyan100 = TextStyle(
-    color: ColorConstant.cyan100,
+  static TextStyle txtInterRegular12Gray700 = TextStyle(
+    color: ColorConstant.gray700,
     fontSize: getFontSize(
-      10,
+      12,
     ),
     fontFamily: 'Inter',
-    fontWeight: FontWeight.w600,
+    fontWeight: FontWeight.w400,
   );
 
   static TextStyle txtInterSemiBold14Cyan300 = TextStyle(
@@ -380,15 +236,6 @@ class AppStyle {
     fontWeight: FontWeight.w600,
   );
 
-  static TextStyle txtInterMedium9 = TextStyle(
-    color: ColorConstant.bluegray100,
-    fontSize: getFontSize(
-      9,
-    ),
-    fontFamily: 'Inter',
-    fontWeight: FontWeight.w500,
-  );
-
   static TextStyle txtInterSemiBold16Cyan300 = TextStyle(
     color: ColorConstant.cyan300,
     fontSize: getFontSize(
@@ -396,5 +243,14 @@ class AppStyle {
     ),
     fontFamily: 'Inter',
     fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle txtInterMedium9 = TextStyle(
+    color: ColorConstant.gray500,
+    fontSize: getFontSize(
+      9,
+    ),
+    fontFamily: 'Inter',
+    fontWeight: FontWeight.w500,
   );
 }

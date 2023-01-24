@@ -118,7 +118,7 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                           top: 103,
                         ),
                         decoration: AppDecoration.fillWhiteA700.copyWith(
-                          borderRadius: BorderRadiusStyle.roundedBorder10,
+                          borderRadius: BorderRadiusStyle.roundedBorder11,
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -160,8 +160,8 @@ class AmbulanceScreen extends GetWidget<AmbulanceController> {
                                       "msg_2640_cabin_creek".tr,
                                       maxLines: null,
                                       textAlign: TextAlign.center,
-                                      style:
-                                          AppStyle.txtInterRegular14.copyWith(
+                                      style: AppStyle.txtInterRegular14Gray700
+                                          .copyWith(
                                         height: getVerticalSize(
                                           1.12,
                                         ),

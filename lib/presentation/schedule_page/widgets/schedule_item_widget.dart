@@ -16,7 +16,7 @@ class ScheduleItemWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.roundedBorder10,
+        borderRadius: BorderRadiusStyle.circleBorder8,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,7 +47,7 @@ class ScheduleItemWidget extends StatelessWidget {
                           "msg_dr_marcus_horizon".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterSemiBold18.copyWith(
+                          style: AppStyle.txtInterSemiBold18Gray700.copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),

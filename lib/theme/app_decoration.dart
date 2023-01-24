@@ -2,27 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mitul_s_application38/core/app_export.dart';
 
 class AppDecoration {
-  static BoxDecoration get txtOutlineTeal50 => BoxDecoration(
-        color: ColorConstant.whiteA700,
-        border: Border.all(
-          color: ColorConstant.teal50,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
-      );
-  static BoxDecoration get outlineBluegray10001 => BoxDecoration(
-        border: Border.all(
-          color: ColorConstant.bluegray10001,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
-      );
   static BoxDecoration get fillCyan300 => BoxDecoration(
-        color: ColorConstant.cyan300,
-      );
-  static BoxDecoration get txtFillCyan300 => BoxDecoration(
         color: ColorConstant.cyan300,
       );
   static BoxDecoration get fillGray400 => BoxDecoration(
@@ -46,15 +26,6 @@ class AppDecoration {
       );
   static BoxDecoration get fillWhiteA700 => BoxDecoration(
         color: ColorConstant.whiteA700,
-      );
-  static BoxDecoration get txtOutlineTeal100 => BoxDecoration(
-        color: ColorConstant.whiteA700,
-        border: Border.all(
-          color: ColorConstant.teal100,
-          width: getHorizontalSize(
-            1.00,
-          ),
-        ),
       );
   static BoxDecoration get outlineBluegray50 => BoxDecoration(
         color: ColorConstant.whiteA700,
@@ -90,9 +61,9 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius roundedBorder10 = BorderRadius.circular(
+  static BorderRadius roundedBorder11 = BorderRadius.circular(
     getHorizontalSize(
-      10.00,
+      11.00,
     ),
   );
 
@@ -132,12 +103,6 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius txtRoundedBorder10 = BorderRadius.circular(
-    getHorizontalSize(
-      10.00,
-    ),
-  );
-
   static BorderRadius customBorderTL8 = BorderRadius.only(
     topLeft: Radius.circular(
       getHorizontalSize(
@@ -156,9 +121,9 @@ class BorderRadiusStyle {
     ),
   );
 
-  static BorderRadius circleBorder18 = BorderRadius.circular(
+  static BorderRadius circleBorder8 = BorderRadius.circular(
     getHorizontalSize(
-      18.00,
+      8.00,
     ),
   );
 }

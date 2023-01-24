@@ -45,7 +45,7 @@ class SettignsItemWidget extends StatelessWidget {
                 "lbl_heart_rate".tr,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.left,
-                style: AppStyle.txtInterSemiBold10Cyan100.copyWith(
+                style: AppStyle.txtInterSemiBold10.copyWith(
                   height: getVerticalSize(
                     1.00,
                   ),

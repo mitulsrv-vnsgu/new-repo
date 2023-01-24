@@ -17,7 +17,7 @@ class CartItemWidget extends StatelessWidget {
       alignment: Alignment.center,
       child: Container(
         decoration: AppDecoration.outlineBluegray50.copyWith(
-          borderRadius: BorderRadiusStyle.roundedBorder10,
+          borderRadius: BorderRadiusStyle.roundedBorder11,
         ),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -51,7 +51,7 @@ class CartItemWidget extends StatelessWidget {
                     "lbl_obh_combi".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtInterSemiBold18.copyWith(
+                    style: AppStyle.txtInterSemiBold18Gray700.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -164,7 +164,7 @@ class CartItemWidget extends StatelessWidget {
                         "lbl_9_99".tr,
                         overflow: TextOverflow.ellipsis,
                         textAlign: TextAlign.left,
-                        style: AppStyle.txtInterSemiBold18.copyWith(
+                        style: AppStyle.txtInterSemiBold18Gray700.copyWith(
                           height: getVerticalSize(
                             1.00,
                           ),
