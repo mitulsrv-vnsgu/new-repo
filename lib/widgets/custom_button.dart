@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mitul_s_application38/core/app_export.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
 
 class CustomButton extends StatelessWidget {
   CustomButton(
@@ -101,13 +101,21 @@ class CustomButton extends StatelessWidget {
 
   _setPadding() {
     switch (padding) {
+      case ButtonPadding.PaddingAll19:
+        return getPadding(
+          all: 19,
+        );
       case ButtonPadding.PaddingAll6:
         return getPadding(
           all: 6,
         );
+      case ButtonPadding.PaddingAll9:
+        return getPadding(
+          all: 9,
+        );
       default:
         return getPadding(
-          all: 15,
+          all: 16,
         );
     }
   }
@@ -116,22 +124,26 @@ class CustomButton extends StatelessWidget {
     switch (variant) {
       case ButtonVariant.FillWhiteA700:
         return ColorConstant.whiteA700;
-      case ButtonVariant.FillBluegray50:
-        return ColorConstant.bluegray50;
-      case ButtonVariant.OutlineWhiteA700:
+      case ButtonVariant.FillGray200:
+        return ColorConstant.gray200;
+      case ButtonVariant.FillGray102:
+        return ColorConstant.gray102;
+      case ButtonVariant.FillRedA200:
+        return ColorConstant.redA200;
+      case ButtonVariant.OutlineBlue600:
         return null;
       default:
-        return ColorConstant.cyan300;
+        return ColorConstant.blue600;
     }
   }
 
   _setTextButtonBorder() {
     switch (variant) {
-      case ButtonVariant.OutlineWhiteA700:
+      case ButtonVariant.OutlineBlue600:
         return BorderSide(
-          color: ColorConstant.whiteA700,
+          color: ColorConstant.blue600,
           width: getHorizontalSize(
-            2.00,
+            1.00,
           ),
         );
       default:
@@ -142,8 +154,19 @@ class CustomButton extends StatelessWidget {
 
   _setBorderRadius() {
     switch (shape) {
+      case ButtonShape.CircleBorder28:
+        return BorderRadius.circular(
+          getHorizontalSize(
+            28.00,
+          ),
+        );
       case ButtonShape.CustomBorderBL8:
         return BorderRadius.only(
+          topLeft: Radius.circular(
+            getHorizontalSize(
+              0.00,
+            ),
+          ),
           topRight: Radius.circular(
             getHorizontalSize(
               8.00,
@@ -173,49 +196,67 @@ class CustomButton extends StatelessWidget {
 
   _setFontStyle() {
     switch (fontStyle) {
-      case ButtonFontStyle.InterSemiBold14:
+      case ButtonFontStyle.InterSemiBold16:
         return TextStyle(
           color: ColorConstant.whiteA700,
           fontSize: getFontSize(
-            14,
+            16,
           ),
           fontFamily: 'Inter',
           fontWeight: FontWeight.w600,
         );
-      case ButtonFontStyle.InterSemiBold14Teal300:
+      case ButtonFontStyle.RalewayRomanSemiBold16Blue600:
         return TextStyle(
-          color: ColorConstant.teal300,
+          color: ColorConstant.blue600,
           fontSize: getFontSize(
-            14,
+            16,
           ),
-          fontFamily: 'Inter',
+          fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
         );
-      case ButtonFontStyle.InterRegular14:
+      case ButtonFontStyle.RalewayRomanRegular16:
         return TextStyle(
-          color: ColorConstant.gray700,
+          color: ColorConstant.bluegray300,
           fontSize: getFontSize(
-            14,
+            16,
           ),
-          fontFamily: 'Inter',
+          fontFamily: 'Raleway',
           fontWeight: FontWeight.w400,
         );
-      case ButtonFontStyle.InterSemiBold14Gray700:
+      case ButtonFontStyle.RalewayRomanSemiBold12:
+        return TextStyle(
+          color: ColorConstant.blue600,
+          fontSize: getFontSize(
+            12,
+          ),
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.w600,
+        );
+      case ButtonFontStyle.RalewayRomanRegular14:
         return TextStyle(
           color: ColorConstant.gray700,
           fontSize: getFontSize(
             14,
           ),
-          fontFamily: 'Inter',
+          fontFamily: 'Raleway',
+          fontWeight: FontWeight.w400,
+        );
+      case ButtonFontStyle.RalewayRomanSemiBold14:
+        return TextStyle(
+          color: ColorConstant.gray700,
+          fontSize: getFontSize(
+            14,
+          ),
+          fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
         );
       default:
         return TextStyle(
           color: ColorConstant.whiteA700,
           fontSize: getFontSize(
-            12,
+            16,
           ),
-          fontFamily: 'Inter',
+          fontFamily: 'Raleway',
           fontWeight: FontWeight.w600,
         );
     }
@@ -225,25 +266,32 @@ class CustomButton extends StatelessWidget {
 enum ButtonShape {
   Square,
   RoundedBorder8,
+  CircleBorder28,
   CustomBorderBL8,
 }
 
 enum ButtonPadding {
+  PaddingAll16,
+  PaddingAll19,
   PaddingAll6,
-  PaddingAll15,
+  PaddingAll9,
 }
 
 enum ButtonVariant {
-  FillCyan300,
-  OutlineWhiteA700,
+  FillBlue600,
+  OutlineBlue600,
   FillWhiteA700,
-  FillBluegray50,
+  FillGray200,
+  FillGray102,
+  FillRedA200,
 }
 
 enum ButtonFontStyle {
-  InterSemiBold12,
-  InterSemiBold14,
-  InterSemiBold14Teal300,
-  InterRegular14,
-  InterSemiBold14Gray700,
+  RalewayRomanSemiBold16,
+  InterSemiBold16,
+  RalewayRomanSemiBold16Blue600,
+  RalewayRomanRegular16,
+  RalewayRomanSemiBold12,
+  RalewayRomanRegular14,
+  RalewayRomanSemiBold14,
 }

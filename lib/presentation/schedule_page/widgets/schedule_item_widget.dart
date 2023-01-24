@@ -1,8 +1,8 @@
 import '../controller/schedule_controller.dart';
 import '../models/schedule_item_model.dart';
 import 'package:flutter/material.dart';
-import 'package:mitul_s_application38/core/app_export.dart';
-import 'package:mitul_s_application38/widgets/custom_button.dart';
+import 'package:mitul_s_application39/core/app_export.dart';
+import 'package:mitul_s_application39/widgets/custom_button.dart';
 
 // ignore: must_be_immutable
 class ScheduleItemWidget extends StatelessWidget {
@@ -15,8 +15,8 @@ class ScheduleItemWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: AppDecoration.outlineBluegray50.copyWith(
-        borderRadius: BorderRadiusStyle.circleBorder8,
+      decoration: AppDecoration.outlineGray200.copyWith(
+        borderRadius: BorderRadiusStyle.roundedBorder8,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,17 +37,18 @@ class ScheduleItemWidget extends StatelessWidget {
                 children: [
                   Padding(
                     padding: getPadding(
-                      bottom: 5,
+                      bottom: 7,
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(
-                          "msg_dr_marcus_horizon".tr,
+                          "msg_dr_marcus_hori".tr,
                           overflow: TextOverflow.ellipsis,
                           textAlign: TextAlign.left,
-                          style: AppStyle.txtInterSemiBold18Gray700.copyWith(
+                          style: AppStyle.txtRalewayRomanSemiBold18Gray901
+                              .copyWith(
                             height: getVerticalSize(
                               1.00,
                             ),
@@ -62,7 +63,8 @@ class ScheduleItemWidget extends StatelessWidget {
                             "lbl_chardiologist".tr,
                             overflow: TextOverflow.ellipsis,
                             textAlign: TextAlign.left,
-                            style: AppStyle.txtInterMedium12.copyWith(
+                            style: AppStyle.txtRalewayRomanMedium12Gray500
+                                .copyWith(
                               height: getVerticalSize(
                                 1.00,
                               ),
@@ -73,15 +75,20 @@ class ScheduleItemWidget extends StatelessWidget {
                     ),
                   ),
                   CustomImageView(
-                    imagePath: ImageConstant.imgDrugthumbnail,
+                    imagePath: ImageConstant.imgPexelscedricf,
                     height: getSize(
                       46.00,
                     ),
                     width: getSize(
                       46.00,
                     ),
+                    radius: BorderRadius.circular(
+                      getHorizontalSize(
+                        23.00,
+                      ),
+                    ),
                     margin: getMargin(
-                      top: 1,
+                      top: 2,
                     ),
                   ),
                 ],
@@ -91,37 +98,33 @@ class ScheduleItemWidget extends StatelessWidget {
           Padding(
             padding: getPadding(
               left: 15,
-              top: 24,
+              top: 25,
               right: 15,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.max,
               children: [
                 CustomImageView(
-                  svgPath: ImageConstant.imgIconlylightca,
+                  svgPath: ImageConstant.imgIconlylightca15x15,
                   height: getSize(
                     15.00,
                   ),
                   width: getSize(
                     15.00,
                   ),
-                  margin: getMargin(
-                    top: 1,
-                    bottom: 1,
-                  ),
                 ),
                 Padding(
                   padding: getPadding(
                     left: 5,
-                    top: 1,
+                    bottom: 2,
                   ),
                   child: Text(
-                    "lbl_26_06_2021".tr,
+                    "lbl_26_06_2022".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtInterMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayRomanMedium12Gray700.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -137,22 +140,19 @@ class ScheduleItemWidget extends StatelessWidget {
                     15.00,
                   ),
                   margin: getMargin(
-                    left: 14,
-                    top: 1,
-                    bottom: 1,
+                    left: 11,
                   ),
                 ),
                 Padding(
                   padding: getPadding(
                     left: 5,
-                    top: 1,
                     bottom: 1,
                   ),
                   child: Text(
                     "lbl_10_30_am".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtInterMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayRomanMedium12Gray700.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -167,7 +167,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     6.00,
                   ),
                   margin: getMargin(
-                    left: 12,
+                    left: 16,
                     top: 5,
                     bottom: 4,
                   ),
@@ -189,7 +189,7 @@ class ScheduleItemWidget extends StatelessWidget {
                     "lbl_confirmed".tr,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.left,
-                    style: AppStyle.txtInterMedium12Gray700.copyWith(
+                    style: AppStyle.txtRalewayRomanMedium12Gray700.copyWith(
                       height: getVerticalSize(
                         1.00,
                       ),
@@ -204,7 +204,7 @@ class ScheduleItemWidget extends StatelessWidget {
             child: Padding(
               padding: getPadding(
                 left: 15,
-                top: 13,
+                top: 14,
                 right: 15,
                 bottom: 16,
               ),
@@ -217,8 +217,8 @@ class ScheduleItemWidget extends StatelessWidget {
                     height: 46,
                     width: 145,
                     text: "lbl_cancel".tr,
-                    variant: ButtonVariant.FillBluegray50,
-                    fontStyle: ButtonFontStyle.InterSemiBold14Gray700,
+                    variant: ButtonVariant.FillGray102,
+                    fontStyle: ButtonFontStyle.RalewayRomanSemiBold14,
                   ),
                   CustomButton(
                     height: 46,
